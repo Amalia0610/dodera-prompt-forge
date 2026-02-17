@@ -1,5 +1,6 @@
 import { Separator } from "@/components/ui/separator";
 import { Globe, Mail, MapPin, Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Logo } from "@/components/Logo";
 import { COMPANY, FOOTER_LINK_GROUPS, SOCIAL_LINKS } from "@/config/site";
 
@@ -70,12 +71,21 @@ export function Footer() {
               <ul className="space-y-2.5">
                 {group.links.map((l) => (
                   <li key={l.label}>
-                    <a
-                      href={l.href}
-                      className="text-sm text-foreground/60 transition-colors hover:text-foreground"
-                    >
-                      {l.label}
-                    </a>
+                    {l.href.startsWith("/") || l.href.startsWith("/#") ? (
+                      <Link
+                        to={l.href}
+                        className="text-sm text-foreground/60 transition-colors hover:text-foreground"
+                      >
+                        {l.label}
+                      </Link>
+                    ) : (
+                      <a
+                        href={l.href}
+                        className="text-sm text-foreground/60 transition-colors hover:text-foreground"
+                      >
+                        {l.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

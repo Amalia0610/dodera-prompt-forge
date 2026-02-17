@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Terminal } from "@/components/Terminal";
 import { fadeInUp, fadeInUpLg } from "@/lib/animations";
@@ -45,13 +46,13 @@ export function HeroSection() {
               className="flex flex-wrap justify-center gap-3 lg:justify-start"
             >
               <Button size="lg" asChild>
-                <a href="#contact">
+                <Link to="/#contact">
                   Start a Project
                   <ArrowRight className="ml-1 size-4" />
-                </a>
+                </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <a href="#services">View Services</a>
+                <Link to="/#services">View Services</Link>
               </Button>
             </motion.div>
           </div>

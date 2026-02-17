@@ -26,6 +26,7 @@ import type {
     FooterLinkGroup,
     TerminalLine,
     SocialLink,
+    BlogPost,
 } from "@/types";
 
 // ── Company ─────────────────────────────────────────────
@@ -51,8 +52,8 @@ export const SERVICES: Service[] = [
             "Automate repetitive tasks and workflows with custom AI agents. We build intelligent systems that handle daily operations, data processing, and decision-making at scale.",
         tags: ["Workflow Automation", "AI Agents", "Process Optimization"],
         highlights: [
-            "Custom AI Agents",
-            "AI Powered Automations",
+            { label: "Custom AI Agents", href: "/services/custom-ai-agents" },
+            { label: "AI Powered Automations", href: "/services/ai-powered-automations" },
         ],
         href: "/services/ai-development",
     },
@@ -64,9 +65,9 @@ export const SERVICES: Service[] = [
             "Launch your digital product with confidence. We handle everything from MVP development to enterprise-grade platforms using proven tech stacks.",
         tags: [".NET", "Laravel", "Nuxt", "Full-Stack"],
         highlights: [
-            "MVP to Market",
-            "Enterprise Platforms",
-            "SaaS Products",
+            { label: "MVP to Market", href: "/services/mvp-to-market" },
+            { label: "Enterprise Platforms", href: "/services/enterprise-platforms" },
+            { label: "SaaS Products", href: "/services/saas-products" },
         ],
         href: "/services/software-development",
     },
@@ -78,7 +79,7 @@ export const SERVICES: Service[] = [
             "Transform your codebase and internal docs into AI-ready knowledge bases. Make your team's expertise searchable, accessible, and actionable.",
         tags: ["Knowledge Indexing", "AI Context", "Documentation"],
         highlights: [
-            "Documentation Systems",
+            { label: "Documentation Systems", href: "/services/documentation-systems" },
         ],
         href: "/services/technical-documentation",
     },
@@ -116,8 +117,9 @@ export const PROCESS_STEPS: ProcessStep[] = [
 // ── Navigation ──────────────────────────────────────────
 
 export const NAV_LINKS: NavLink[] = [
-    { label: "Process", href: "#process" },
-    { label: "Contact", href: "#contact" },
+    { label: "Process", href: "/#process" },
+    { label: "Blog", href: "/blog" },
+    { label: "Contact", href: "/#contact" },
 ];
 
 // ── Social Media ────────────────────────────────────────
@@ -132,11 +134,19 @@ export const SOCIAL_LINKS: SocialLink[] = [
 
 export const FOOTER_LINK_GROUPS: FooterLinkGroup[] = [
     {
+        heading: "Services",
+        links: [
+            { label: "AI Development", href: "/services/ai-development" },
+            { label: "Software Development", href: "/services/software-development" },
+            { label: "Technical Documentation", href: "/services/technical-documentation" },
+        ],
+    },
+    {
         heading: "Company",
         links: [
-            { label: "Services", href: "#services" },
-            { label: "Process", href: "#process" },
-            { label: "Contact", href: "#contact" },
+            { label: "Process", href: "/#process" },
+            { label: "Blog", href: "/blog" },
+            { label: "Contact", href: "/#contact" },
         ],
     },
     {
