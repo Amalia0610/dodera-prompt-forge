@@ -2,6 +2,11 @@ import type { LucideIcon } from "lucide-react";
 
 // ── Services ────────────────────────────────────────────
 
+export interface ServiceHighlight {
+    label: string;
+    href: string;
+}
+
 export interface Service {
     icon: LucideIcon;
     title: string;
@@ -9,9 +14,49 @@ export interface Service {
     description: string;
     tags: string[];
     /** Short bullet points shown in the navbar mega-menu. */
-    highlights: string[];
+    highlights: ServiceHighlight[];
     /** URL path for the service page */
     href: string;
+}
+
+// ── Service Pages ───────────────────────────────────────
+
+export interface ServicePageSection {
+    title: string;
+    content: string;
+    bullets?: string[];
+}
+
+export interface ServicePageFAQ {
+    question: string;
+    answer: string;
+}
+
+export interface ServicePageData {
+    slug: string;
+    metaTitle: string;
+    metaDescription: string;
+    keywords: string[];
+    canonical: string;
+    heroLabel: string;
+    heroTitle: string;
+    heroHighlight: string;
+    heroDescription: string;
+    sections: ServicePageSection[];
+    faqs: ServicePageFAQ[];
+    relatedServices: { label: string; href: string }[];
+}
+
+// ── Blog ────────────────────────────────────────────────
+
+export interface BlogPost {
+    slug: string;
+    title: string;
+    excerpt: string;
+    date: string;
+    readTime: string;
+    category: string;
+    tags: string[];
 }
 
 // ── Process ─────────────────────────────────────────────

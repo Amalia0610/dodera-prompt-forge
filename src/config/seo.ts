@@ -24,7 +24,7 @@ export const SITE = {
 
 /** Default meta used when a page doesn't override values. */
 export const DEFAULT_META = {
-    title: `${SITE.name} — ${SITE.tagline}`,
+    title: `${SITE.name} - ${SITE.tagline}`,
     description:
         "We build mission-critical applications, AI agents, and scalable infrastructure for companies that can't afford downtime. Based in Romania, serving clients internationally.",
     keywords: [

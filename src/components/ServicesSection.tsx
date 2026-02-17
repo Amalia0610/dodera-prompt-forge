@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -46,13 +47,13 @@ export function ServicesSection() {
                   </Badge>
                 ))}
               </div>
-              <a
-                href={s.href}
+              <Link
+                to={s.href}
                 className="mt-auto inline-flex items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-primary/80"
               >
                 Learn More
                 <ArrowRight className="size-4" />
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -67,10 +68,10 @@ export function ServicesSection() {
           className="mt-12 flex justify-center"
         >
           <Button size="lg" asChild>
-            <a href="#contact">
+            <Link to="/#contact">
               Get a Quote
               <ArrowRight className="ml-1 size-4" />
-            </a>
+            </Link>
           </Button>
         </motion.div>
       </div>
