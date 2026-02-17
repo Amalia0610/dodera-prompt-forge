@@ -32,8 +32,9 @@ export function HeroSection() {
               transition={{ duration: 0.4, delay: 0.16 }}
               className="max-w-lg text-base sm:text-lg leading-relaxed text-muted-foreground"
             >
-              We build mission-critical applications, AI agents, and scalable
-              infrastructure for companies that can't afford downtime.
+              We offer premium IT consultancy specializing in high-performance AI
+              infrastructure, custom SaaS launches, and smart technical
+              documentation for visionary enterprises.
             </motion.p>
 
             <motion.div

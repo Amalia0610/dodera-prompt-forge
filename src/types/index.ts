@@ -10,6 +10,8 @@ export interface Service {
     tags: string[];
     /** Short bullet points shown in the navbar mega-menu. */
     highlights: string[];
+    /** URL path for the service page */
+    href: string;
 }
 
 // ── Process ─────────────────────────────────────────────
@@ -30,6 +32,14 @@ export interface NavLink {
 export interface FooterLinkGroup {
     heading: string;
     links: NavLink[];
+}
+
+// ── Social Media ────────────────────────────────────────
+
+export interface SocialLink {
+    label: string;
+    href: string;
+    icon: LucideIcon;
 }
 
 // ── Terminal ────────────────────────────────────────────

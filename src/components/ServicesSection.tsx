@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { SectionHeading } from "@/components/SectionHeading";
 import { SERVICES } from "@/config/site";
@@ -23,7 +24,7 @@ export function ServicesSection() {
               whileInView="visible"
               viewport={viewportOnce}
               transition={stagger(i)}
-              className="group rounded-xl border border-white/[0.06] bg-white/[0.02] p-8 backdrop-blur-sm transition-colors hover:bg-white/[0.04]"
+              className="group flex flex-col rounded-xl border border-white/[0.06] bg-white/[0.02] p-8 backdrop-blur-sm transition-colors hover:bg-white/[0.04]"
             >
               <div className="mb-6 flex size-12 items-center justify-center rounded-lg border border-white/[0.06] bg-white/[0.04]">
                 <s.icon className="size-6 text-primary" />
@@ -33,7 +34,7 @@ export function ServicesSection() {
               <p className="mb-6 text-sm leading-relaxed text-muted-foreground">
                 {s.description}
               </p>
-              <div className="flex flex-wrap gap-2">
+              <div className="mb-6 flex flex-wrap gap-2">
                 {s.tags.map((tag) => (
                   <Badge
                     key={tag}
@@ -44,6 +45,13 @@ export function ServicesSection() {
                   </Badge>
                 ))}
               </div>
+              <a
+                href={s.href}
+                className="mt-auto inline-flex items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-primary/80"
+              >
+                Learn More
+                <ArrowRight className="size-4" />
+              </a>
             </motion.div>
           ))}
         </div>
