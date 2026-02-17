@@ -1,31 +1,18 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import { TERMINAL_LINES } from "@/config/site";
+import type { TerminalLine } from "@/types";
 
-interface TerminalLine {
-    type: "input" | "output" | "success" | "error";
-    text: string;
-}
-
-const lines: TerminalLine[] = [
-    { type: "input", text: "dodera deploy --target production" },
-    { type: "output", text: "▸ Building application..." },
-    { type: "output", text: "▸ Running 247 tests — all passed ✓" },
-    { type: "output", text: "▸ Optimizing bundle — 63% smaller" },
-    { type: "output", text: "▸ Deploying to 3 regions..." },
-    { type: "success", text: "✓ Deployed successfully in 4.2s" },
-    { type: "input", text: "dodera status" },
-    { type: "success", text: "✓ All systems operational — 99.99% uptime" },
-];
-
-export default function Terminal() {
+export function Terminal() {
     const [visibleLines, setVisibleLines] = useState(0);
 
     useEffect(() => {
-        if (visibleLines < lines.length) {
+        if (visibleLines < TERMINAL_LINES.length) {
+            const current = TERMINAL_LINES[visibleLines];
             const delay =
                 visibleLines === 0
                     ? 800
-                    : lines[visibleLines]?.type === "input"
+                    : current?.type === "input"
                         ? 1000
                         : 350;
 
@@ -52,7 +39,7 @@ export default function Terminal() {
 
             {/* Body */}
             <div className="space-y-1 p-4 font-mono text-[13px] leading-relaxed min-h-[260px]">
-                {lines.slice(0, visibleLines).map((line, i) => (
+                {TERMINAL_LINES.slice(0, visibleLines).map((line: TerminalLine, i: number) => (
                     <div
                         key={i}
                         className={cn(

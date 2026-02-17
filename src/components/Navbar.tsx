@@ -1,30 +1,11 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Cpu, Code2, FileText, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/Logo";
+import { SERVICES, NAV_LINKS } from "@/config/site";
 
-const services = [
-  {
-    icon: Cpu,
-    title: "AI Development",
-    desc: "MCP Servers & Autonomous Agents",
-    items: ["Custom MCP Server Architecture", "Autonomous Agent Systems", "AI-Ready Infrastructure"],
-  },
-  {
-    icon: Code2,
-    title: "Custom Software",
-    desc: "SaaS, Enterprise .NET/Laravel/Nuxt",
-    items: ["Full-Stack SaaS Platforms", "Enterprise Applications", "MVP to Production"],
-  },
-  {
-    icon: FileText,
-    title: "Smart Documentation",
-    desc: "Institutional Knowledge Indexing",
-    items: ["Codebase Indexing for AI", "Knowledge Base Systems", "Context-Aware Documentation"],
-  },
-];
-
-export default function Navbar() {
+export function Navbar() {
   const [megaOpen, setMegaOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -33,13 +14,7 @@ export default function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         {/* Logo */}
         <a href="/" aria-label="Dodera Software — Home" className="flex items-center gap-2">
-          <div className="flex size-8 items-center justify-center rounded-lg bg-primary">
-            <span className="text-sm font-black text-primary-foreground">D</span>
-          </div>
-          <span className="text-lg font-bold tracking-tight">
-            DODERA
-            <span className="ml-1 font-light text-muted-foreground">SOFTWARE</span>
-          </span>
+          <Logo />
         </a>
 
         {/* Desktop Nav */}
@@ -67,7 +42,7 @@ export default function Navbar() {
                 >
                   <div className="rounded-lg border border-white/[0.08] bg-background/95 p-6 shadow-xl backdrop-blur-xl">
                     <div className="grid grid-cols-3 gap-6">
-                      {services.map((s) => (
+                      {SERVICES.map((s) => (
                         <div key={s.title}>
                           <div className="mb-3 flex items-center gap-2">
                             <div className="flex size-8 items-center justify-center rounded-lg bg-primary/10">
@@ -75,11 +50,11 @@ export default function Navbar() {
                             </div>
                             <div>
                               <p className="text-sm font-semibold">{s.title}</p>
-                              <p className="text-[11px] text-muted-foreground">{s.desc}</p>
+                              <p className="text-[11px] text-muted-foreground">{s.subtitle}</p>
                             </div>
                           </div>
                           <ul className="space-y-1.5">
-                            {s.items.map((item) => (
+                            {s.highlights.map((item) => (
                               <li
                                 key={item}
                                 className="cursor-pointer text-xs text-muted-foreground transition-colors hover:text-foreground"
@@ -97,12 +72,15 @@ export default function Navbar() {
             </AnimatePresence>
           </div>
 
-          <a href="#process" className="text-sm font-medium text-foreground/70 transition-colors hover:text-foreground">
-            Process
-          </a>
-          <a href="#contact" className="text-sm font-medium text-foreground/70 transition-colors hover:text-foreground">
-            Contact
-          </a>
+          {NAV_LINKS.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
+            >
+              {link.label}
+            </a>
+          ))}
 
           <Button size="sm" asChild>
             <a href="#contact">Get Started</a>
@@ -135,7 +113,7 @@ export default function Navbar() {
               <p className="mb-3 text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">
                 Services
               </p>
-              {services.map((s) => (
+              {SERVICES.map((s) => (
                 <a
                   key={s.title}
                   href="#services"
@@ -147,27 +125,23 @@ export default function Navbar() {
                   </div>
                   <div>
                     <span className="font-medium text-foreground">{s.title}</span>
-                    <p className="text-xs text-muted-foreground">{s.desc}</p>
+                    <p className="text-xs text-muted-foreground">{s.subtitle}</p>
                   </div>
                 </a>
               ))}
 
               <div className="my-3 h-px bg-border" />
 
-              <a
-                href="#process"
-                onClick={() => setMobileOpen(false)}
-                className="block rounded-lg px-3 py-2.5 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
-              >
-                Process
-              </a>
-              <a
-                href="#contact"
-                onClick={() => setMobileOpen(false)}
-                className="block rounded-lg px-3 py-2.5 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
-              >
-                Contact
-              </a>
+              {NAV_LINKS.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="block rounded-lg px-3 py-2.5 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+                >
+                  {link.label}
+                </a>
+              ))}
 
               <div className="pt-3">
                 <Button className="w-full" size="sm" asChild>

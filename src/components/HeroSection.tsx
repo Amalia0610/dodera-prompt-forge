@@ -1,10 +1,10 @@
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import Terminal from "@/components/Terminal";
+import { Terminal } from "@/components/Terminal";
+import { fadeInUp, fadeInUpLg } from "@/lib/animations";
 
-export default function HeroSection() {
+export function HeroSection() {
   return (
     <section aria-label="Hero" className="relative min-h-[100dvh] w-full overflow-hidden">
       {/* Grid background */}
@@ -15,8 +15,9 @@ export default function HeroSection() {
           {/* Left — Copy */}
           <div className="flex flex-col gap-5 text-center lg:text-left items-center lg:items-start">
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              variants={fadeInUp}
+              initial="hidden"
+              animate="visible"
               transition={{ duration: 0.4, delay: 0.08 }}
               className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
             >
@@ -25,8 +26,9 @@ export default function HeroSection() {
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              variants={fadeInUp}
+              initial="hidden"
+              animate="visible"
               transition={{ duration: 0.4, delay: 0.16 }}
               className="max-w-lg text-base sm:text-lg leading-relaxed text-muted-foreground"
             >
@@ -35,8 +37,9 @@ export default function HeroSection() {
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              variants={fadeInUp}
+              initial="hidden"
+              animate="visible"
               transition={{ duration: 0.4, delay: 0.24 }}
               className="flex flex-wrap justify-center gap-3 lg:justify-start"
             >
@@ -54,8 +57,9 @@ export default function HeroSection() {
 
           {/* Right — Terminal */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
+            variants={fadeInUpLg}
+            initial="hidden"
+            animate="visible"
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <Terminal />

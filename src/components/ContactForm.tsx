@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
-export default function ContactForm() {
+export function ContactForm() {
     const [submitted, setSubmitted] = useState(false);
 
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
