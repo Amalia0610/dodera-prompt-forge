@@ -30,7 +30,7 @@ export function ContactForm() {
     return (
         <form
             onSubmit={handleSubmit}
-            aria-label="Contact form"
+            aria-label="Contact form to get in touch with Dodera Software for project inquiries"
             className="mx-auto max-w-lg space-y-5 rounded-xl border border-white/[0.06] bg-white/[0.02] p-8 backdrop-blur-sm"
         >
             <div className="grid gap-5 sm:grid-cols-2">
