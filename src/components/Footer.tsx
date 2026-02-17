@@ -1,7 +1,7 @@
 import { Separator } from "@/components/ui/separator";
 import { Globe, Mail, MapPin, Heart } from "lucide-react";
 import { Logo } from "@/components/Logo";
-import { COMPANY, FOOTER_LINK_GROUPS } from "@/config/site";
+import { COMPANY, FOOTER_LINK_GROUPS, SOCIAL_LINKS } from "@/config/site";
 
 export function Footer() {
   return (
@@ -18,6 +18,23 @@ export function Footer() {
             <p className="mb-6 max-w-xs text-sm leading-relaxed text-muted-foreground">
               {COMPANY.tagline}
             </p>
+
+            {/* Social Media Icons */}
+            <div className="mb-6 flex gap-3">
+              {SOCIAL_LINKS.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="flex size-9 items-center justify-center rounded-md border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm transition-all hover:border-white/[0.15] hover:bg-white/[0.08]"
+                >
+                  <social.icon className="size-4 text-muted-foreground/60 transition-colors hover:text-muted-foreground" />
+                </a>
+              ))}
+            </div>
+
             <div className="space-y-3 text-sm">
               <a
                 href={`mailto:${COMPANY.email}`}

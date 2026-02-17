@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/Logo";
-import { SERVICES, NAV_LINKS } from "@/config/site";
+import { SERVICES, NAV_LINKS, SOCIAL_LINKS } from "@/config/site";
 
 export function Navbar() {
   const [megaOpen, setMegaOpen] = useState(false);
@@ -82,6 +82,22 @@ export function Navbar() {
             </a>
           ))}
 
+          {/* Social Media Icons */}
+          <div className="flex items-center gap-2">
+            {SOCIAL_LINKS.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.label}
+                className="flex size-8 items-center justify-center rounded-md border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm transition-all hover:border-white/[0.15] hover:bg-white/[0.08]"
+              >
+                <social.icon className="size-4 text-muted-foreground/60 transition-colors hover:text-muted-foreground" />
+              </a>
+            ))}
+          </div>
+
           <Button size="sm" asChild>
             <a href="#contact">Get Started</a>
           </Button>
@@ -147,6 +163,22 @@ export function Navbar() {
                 <Button className="w-full" size="sm" asChild>
                   <a href="#contact" onClick={() => setMobileOpen(false)}>Get Started</a>
                 </Button>
+              </div>
+
+              {/* Social Media Icons - Mobile */}
+              <div className="flex justify-center gap-3 pt-4">
+                {SOCIAL_LINKS.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                    className="flex size-9 items-center justify-center rounded-md border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm transition-all hover:border-white/[0.15] hover:bg-white/[0.08]"
+                  >
+                    <social.icon className="size-4 text-muted-foreground/60" />
+                  </a>
+                ))}
               </div>
             </div>
           </motion.div>

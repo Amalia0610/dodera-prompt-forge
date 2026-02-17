@@ -14,6 +14,9 @@ import {
     Layers,
     Zap,
     Handshake,
+    Linkedin,
+    Instagram,
+    Facebook,
 } from "lucide-react";
 
 import type {
@@ -22,6 +25,7 @@ import type {
     NavLink,
     FooterLinkGroup,
     TerminalLine,
+    SocialLink,
 } from "@/types";
 
 // ── Company ─────────────────────────────────────────────
@@ -42,41 +46,41 @@ export const SERVICES: Service[] = [
     {
         icon: Cpu,
         title: "AI Development",
-        subtitle: "MCP Servers & Autonomous Agents",
+        subtitle: "Intelligent Workflows & Agents",
         description:
-            "We design and deploy production-grade MCP servers and autonomous agent systems that integrate seamlessly with your existing infrastructure.",
-        tags: ["MCP Architecture", "Agent Systems", "AI Pipelines"],
+            "Automate repetitive tasks and workflows with custom AI agents. We build intelligent systems that handle daily operations, data processing, and decision-making at scale.",
+        tags: ["Workflow Automation", "AI Agents", "Process Optimization"],
         highlights: [
-            "Custom MCP Server Architecture",
-            "Autonomous Agent Systems",
-            "AI-Ready Infrastructure",
+            "Custom AI Agents",
+            "AI Powered Automations",
         ],
+        href: "/services/ai-development",
     },
     {
         icon: Code2,
-        title: "Custom Software",
-        subtitle: "SaaS · Enterprise · MVP",
+        title: "Software Development",
+        subtitle: "From Idea to Launch",
         description:
-            "From founder MVPs to enterprise platforms. We build with .NET, Laravel, and Nuxt — battle-tested stacks for mission-critical applications.",
+            "Launch your digital product with confidence. We handle everything from MVP development to enterprise-grade platforms using proven tech stacks.",
         tags: [".NET", "Laravel", "Nuxt", "Full-Stack"],
         highlights: [
-            "Full-Stack SaaS Platforms",
-            "Enterprise Applications",
-            "MVP to Production",
+            "MVP to Market",
+            "Enterprise Platforms",
+            "SaaS Products",
         ],
+        href: "/services/software-development",
     },
     {
         icon: FileText,
-        title: "Smart Documentation",
-        subtitle: "Institutional Knowledge Indexing",
+        title: "Technical Documentation",
+        subtitle: "Knowledge Systems & Indexing",
         description:
-            "Index your entire codebase for AI context. We build documentation systems that make your institutional knowledge searchable and actionable.",
-        tags: ["Codebase Indexing", "Knowledge Graphs", "AI Context"],
+            "Transform your codebase and internal docs into AI-ready knowledge bases. Make your team's expertise searchable, accessible, and actionable.",
+        tags: ["Knowledge Indexing", "AI Context", "Documentation"],
         highlights: [
-            "Codebase Indexing for AI",
-            "Knowledge Base Systems",
-            "Context-Aware Documentation",
+            "Documentation Systems",
         ],
+        href: "/services/technical-documentation",
     },
 ];
 
@@ -114,6 +118,14 @@ export const PROCESS_STEPS: ProcessStep[] = [
 export const NAV_LINKS: NavLink[] = [
     { label: "Process", href: "#process" },
     { label: "Contact", href: "#contact" },
+];
+
+// ── Social Media ────────────────────────────────────────
+
+export const SOCIAL_LINKS: SocialLink[] = [
+    { label: "LinkedIn", href: "https://linkedin.com/company/dodera", icon: Linkedin },
+    { label: "Instagram", href: "https://instagram.com/doderasoftware", icon: Instagram },
+    { label: "Facebook", href: "https://facebook.com/doderasoftware", icon: Facebook },
 ];
 
 // ── Footer ──────────────────────────────────────────────
