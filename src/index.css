@@ -2,48 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 7%;
-    --foreground: 0 0% 95%;
+    --background: 0 0% 6%;
+    --foreground: 0 0% 93%;
 
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 93%;
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 93%;
 
-    --primary: 1 97% 44%;
+    --primary: 4 90% 58%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 217 91% 53%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 0 0% 13%;
+    --secondary-foreground: 0 0% 93%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 55%;
+    --muted: 0 0% 13%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 0 0% 13%;
-    --accent-foreground: 0 0% 95%;
+    --accent: 0 0% 11%;
+    --accent-foreground: 0 0% 93%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 1 97% 44%;
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 4 90% 58%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 8%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 1 97% 44%;
+    --sidebar-background: 0 0% 7%;
+    --sidebar-foreground: 0 0% 93%;
+    --sidebar-primary: 4 90% 58%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 13%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 1 97% 44%;
+    --sidebar-accent: 0 0% 11%;
+    --sidebar-accent-foreground: 0 0% 93%;
+    --sidebar-border: 0 0% 14%;
+    --sidebar-ring: 4 90% 58%;
   }
 }
 
@@ -53,100 +53,23 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', sans-serif;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
   }
 }
 
 @layer components {
-  .glass-card {
-    @apply relative overflow-hidden rounded-xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-xl;
-  }
-
-  .glass-card::before {
-    content: '';
-    @apply absolute inset-0 rounded-xl;
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.06) 0%,
-      transparent 40%
-    );
-    pointer-events: none;
-  }
-
-  .glass-card:hover::before {
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.1) 0%,
-      transparent 50%
-    );
-  }
-
   .grid-bg {
     background-image:
-      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
+      linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 64px 64px;
   }
 
-  .dot-bg {
-    background-image: radial-gradient(
-      rgba(255, 255, 255, 0.07) 1px,
-      transparent 1px
-    );
-    background-size: 24px 24px;
-  }
-
-  .glow-red {
-    background: radial-gradient(
-      600px circle at var(--glow-x, 50%) var(--glow-y, 30%),
-      hsl(1 97% 44% / 0.08),
-      transparent 60%
-    );
-  }
-
-  .glow-blue {
-    background: radial-gradient(
-      400px circle at 80% 60%,
-      hsl(217 91% 53% / 0.06),
-      transparent 60%
-    );
-  }
-
-  .text-gradient-red {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(1, 97%, 44%), hsl(1, 97%, 55%));
-  }
-
-  .label-caps {
-    @apply text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground;
-  }
-
-  .heading-tight {
-    @apply font-bold tracking-tight leading-[1.1];
-  }
-}
-
-@layer utilities {
-  .shine-border {
-    position: relative;
-  }
-  .shine-border::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 1px;
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.12),
-      transparent 40%,
-      transparent 60%,
-      rgba(255, 255, 255, 0.06)
-    );
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
+  .grid-bg-sm {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 32px 32px;
   }
 }

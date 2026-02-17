@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Cpu, Code2, FileText, ArrowUpRight } from "lucide-react";
+import { Cpu, Code2, FileText } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 const services = [
   {
@@ -31,18 +32,21 @@ const services = [
 export default function ServicesSection() {
   return (
     <section id="services" className="relative py-32">
-      <div className="absolute inset-0 dot-bg opacity-20" />
+      <div className="absolute inset-0 grid-bg-sm" />
+
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
           className="mb-16 text-center"
         >
-          <p className="label-caps mb-4">What We Build</p>
-          <h2 className="heading-tight text-3xl sm:text-4xl md:text-5xl text-foreground">
-            Engineering that <span className="text-gradient-red">ships</span>
+          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+            What We Build
+          </p>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            Engineering that <span className="text-primary">ships</span>
           </h2>
         </motion.div>
 
@@ -53,29 +57,27 @@ export default function ServicesSection() {
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.15, duration: 0.5 }}
-              className="glass-card shine-border group cursor-pointer p-8 transition-all duration-300 hover:border-primary/20"
+              transition={{ delay: i * 0.1, duration: 0.4 }}
+              className="group rounded-xl border border-white/[0.06] bg-white/[0.02] p-8 backdrop-blur-sm transition-colors hover:bg-white/[0.04]"
             >
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary/20">
-                <s.icon className="h-6 w-6 text-primary" />
+              <div className="mb-6 flex size-12 items-center justify-center rounded-lg border border-white/[0.06] bg-white/[0.04]">
+                <s.icon className="size-6 text-primary" />
               </div>
-              <h3 className="mb-1 text-xl font-bold text-foreground">{s.title}</h3>
+              <h3 className="mb-1 text-xl font-bold">{s.title}</h3>
               <p className="mb-4 text-sm text-muted-foreground">{s.subtitle}</p>
-              <p className="mb-6 text-sm leading-relaxed text-muted-foreground/80">
+              <p className="mb-6 text-sm leading-relaxed text-muted-foreground">
                 {s.description}
               </p>
               <div className="flex flex-wrap gap-2">
                 {s.tags.map((tag) => (
-                  <span
+                  <Badge
                     key={tag}
-                    className="rounded-md border border-border bg-accent px-2.5 py-1 text-[11px] font-medium text-muted-foreground"
+                    variant="outline"
+                    className="border-white/[0.08] bg-white/[0.03] text-[11px] text-muted-foreground"
                   >
                     {tag}
-                  </span>
+                  </Badge>
                 ))}
-              </div>
-              <div className="mt-6 flex items-center gap-1 text-sm font-medium text-primary opacity-0 transition-opacity group-hover:opacity-100">
-                Learn more <ArrowUpRight className="h-3.5 w-3.5" />
               </div>
             </motion.div>
           ))}
