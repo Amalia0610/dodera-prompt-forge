@@ -31,7 +31,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="relative py-32">
+    <section id="services" aria-labelledby="services-heading" className="relative py-32">
       <div className="absolute inset-0 grid-bg-sm" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
@@ -45,7 +45,7 @@ export default function ServicesSection() {
           <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
             What We Build
           </p>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+          <h2 id="services-heading" className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             Engineering that <span className="text-primary">ships</span>
           </h2>
         </motion.div>

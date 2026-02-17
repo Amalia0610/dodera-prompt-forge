@@ -15,7 +15,7 @@ const links = {
 
 export default function Footer() {
   return (
-    <footer>
+    <footer role="contentinfo">
       <Separator />
 
       <div className="mx-auto max-w-7xl px-6 py-16">
@@ -38,6 +38,7 @@ export default function Footer() {
             <div className="space-y-3 text-sm">
               <a
                 href="mailto:office@doderasoft.com"
+                aria-label="Send us an email at office@doderasoft.com"
                 className="flex items-center gap-2 text-foreground/70 transition-colors hover:text-foreground"
               >
                 <Mail className="size-4" />
@@ -47,6 +48,7 @@ export default function Footer() {
                 href="https://doderasoft.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit doderasoft.com"
                 className="flex items-center gap-2 text-foreground/70 transition-colors hover:text-foreground"
               >
                 <Globe className="size-4" />

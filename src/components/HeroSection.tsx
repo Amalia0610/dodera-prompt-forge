@@ -6,7 +6,7 @@ import Terminal from "@/components/Terminal";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[100dvh] w-full overflow-hidden">
+    <section aria-label="Hero" className="relative min-h-[100dvh] w-full overflow-hidden">
       {/* Grid background */}
       <div className="absolute inset-0 grid-bg" />
 

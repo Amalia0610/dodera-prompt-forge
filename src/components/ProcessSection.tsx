@@ -26,7 +26,7 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section id="process" className="relative py-32">
+    <section id="process" aria-labelledby="process-heading" className="relative py-32">
       <div className="absolute inset-0 grid-bg" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
@@ -39,7 +39,7 @@ export default function ProcessSection() {
           <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
             How We Work
           </p>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+          <h2 id="process-heading" className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             From zero to <span className="text-primary">production</span>
           </h2>
         </motion.div>

@@ -3,7 +3,7 @@ import ContactForm from "@/components/ContactForm";
 
 export default function CTASection() {
   return (
-    <section id="contact" className="relative py-32">
+    <section id="contact" aria-labelledby="contact-heading" className="relative py-32">
       <div className="absolute inset-0 grid-bg-sm" />
 
       <div className="relative z-10 mx-auto max-w-5xl px-6">
@@ -16,7 +16,7 @@ export default function CTASection() {
           <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
             Ready to Build?
           </p>
-          <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+          <h2 id="contact-heading" className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             Stop searching for talent.
             <br />
             <span className="text-primary">Start shipping code.</span>
