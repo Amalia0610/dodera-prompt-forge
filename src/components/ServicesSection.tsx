@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/SectionHeading";
 import { SERVICES } from "@/config/site";
 import { fadeInUpLg, viewportOnce, stagger } from "@/lib/animations";
@@ -55,6 +56,23 @@ export function ServicesSection() {
             </motion.div>
           ))}
         </div>
+
+        {/* CTA Button */}
+        <motion.div
+          variants={fadeInUpLg}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          transition={{ duration: 0.4, delay: 0.3 }}
+          className="mt-12 flex justify-center"
+        >
+          <Button size="lg" asChild>
+            <a href="#contact">
+              Get a Quote
+              <ArrowRight className="ml-1 size-4" />
+            </a>
+          </Button>
+        </motion.div>
       </div>
     </section>
   );

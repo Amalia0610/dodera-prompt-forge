@@ -37,7 +37,7 @@ export const COMPANY = {
     url: "https://doderasoft.com",
     location: "Romania · International",
     tagline:
-        "Mission-critical software and AI development from Romania, serving clients internationally.",
+        "Premium software and AI development from Romania, serving clients internationally.",
 } as const;
 
 // ── Services ────────────────────────────────────────────
