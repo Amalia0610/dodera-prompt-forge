@@ -34,7 +34,7 @@ export default function HeroSection() {
           <h1 className="heading-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground">
             Digital Products.{" "}
             <br className="sm:hidden" />
-            Engineered for{" "}
+            Built for{" "}
             {/* Fixed-width container to prevent layout shift */}
             <span className="relative inline-block text-left align-bottom">
               {/* Invisible longest word to reserve space */}
