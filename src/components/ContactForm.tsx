@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
-export default function ContactForm() {
+export function ContactForm() {
     const [submitted, setSubmitted] = useState(false);
 
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -30,30 +30,35 @@ export default function ContactForm() {
     return (
         <form
             onSubmit={handleSubmit}
+            aria-label="Contact form"
             className="mx-auto max-w-lg space-y-5 rounded-xl border border-white/[0.06] bg-white/[0.02] p-8 backdrop-blur-sm"
         >
             <div className="grid gap-5 sm:grid-cols-2">
                 <div className="space-y-2">
-                    <label className="flex items-center gap-2 text-sm font-medium">
+                    <label htmlFor="contact-name" className="flex items-center gap-2 text-sm font-medium">
                         <User className="size-3.5 text-muted-foreground" />
                         Name
                     </label>
                     <Input
+                        id="contact-name"
                         required
                         name="name"
+                        autoComplete="name"
                         placeholder="Your name"
                         className="border-white/[0.08] bg-white/[0.03]"
                     />
                 </div>
                 <div className="space-y-2">
-                    <label className="flex items-center gap-2 text-sm font-medium">
+                    <label htmlFor="contact-email" className="flex items-center gap-2 text-sm font-medium">
                         <Mail className="size-3.5 text-muted-foreground" />
                         Email
                     </label>
                     <Input
+                        id="contact-email"
                         required
                         type="email"
                         name="email"
+                        autoComplete="email"
                         placeholder="you@company.com"
                         className="border-white/[0.08] bg-white/[0.03]"
                     />
@@ -61,23 +66,26 @@ export default function ContactForm() {
             </div>
 
             <div className="space-y-2">
-                <label className="flex items-center gap-2 text-sm font-medium">
+                <label htmlFor="contact-company" className="flex items-center gap-2 text-sm font-medium">
                     <Building className="size-3.5 text-muted-foreground" />
                     Company
                 </label>
                 <Input
+                    id="contact-company"
                     name="company"
+                    autoComplete="organization"
                     placeholder="Company name (optional)"
                     className="border-white/[0.08] bg-white/[0.03]"
                 />
             </div>
 
             <div className="space-y-2">
-                <label className="flex items-center gap-2 text-sm font-medium">
+                <label htmlFor="contact-message" className="flex items-center gap-2 text-sm font-medium">
                     <MessageSquare className="size-3.5 text-muted-foreground" />
                     Project Details
                 </label>
                 <Textarea
+                    id="contact-message"
                     required
                     name="message"
                     rows={4}
