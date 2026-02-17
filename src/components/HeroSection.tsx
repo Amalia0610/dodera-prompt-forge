@@ -32,7 +32,7 @@ export default function HeroSection() {
           <p className="label-caps mb-6">Mission-Critical Engineering</p>
 
           <h1 className="heading-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground">
-            Digital Products.{" "}
+            Digital Services.{" "}
             <br className="sm:hidden" />
             Built for{" "}
             {/* Fixed-width container to prevent layout shift */}
