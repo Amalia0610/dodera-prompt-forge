@@ -33,7 +33,7 @@ export function ServicesSection() {
               </div>
               <h3 className="mb-1 text-xl font-bold">{s.title}</h3>
               <p className="mb-4 text-sm text-muted-foreground">{s.subtitle}</p>
-              <p className="mb-6 text-sm leading-relaxed text-muted-foreground">
+              <p className="mb-6 min-h-[5rem] text-sm leading-relaxed text-muted-foreground">
                 {s.description}
               </p>
               <div className="mb-6 flex flex-wrap gap-2">

@@ -63,7 +63,7 @@ export const SERVICES: Service[] = [
         subtitle: "From Idea to Launch",
         description:
             "Launch your digital product with confidence. We handle everything from MVP development to enterprise-grade platforms using proven tech stacks.",
-        tags: [".NET", "Laravel", "Nuxt", "Full-Stack"],
+        tags: ["Laravel", "Nuxt", "Full-Stack"],
         highlights: [
             { label: "MVP to Market", href: "/services/mvp-to-market" },
             { label: "Enterprise Platforms", href: "/services/enterprise-platforms" },
@@ -161,12 +161,13 @@ export const FOOTER_LINK_GROUPS: FooterLinkGroup[] = [
 // ── Trusted-by logos ────────────────────────────────────
 
 export const TRUSTED_LOGOS: string[] = [
-    "Google",
-    "Microsoft",
-    "Amazon",
-    "Meta",
-    "Stripe",
+    "Vue",
+    "React",
+    "Next.js",
+    "Nuxt",
+    "Laravel",
     "Vercel",
+    "Stripe",
 ];
 
 // ── Terminal lines ──────────────────────────────────────
