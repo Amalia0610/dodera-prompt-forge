@@ -4,7 +4,7 @@ import { fadeInUp, viewportOnce } from "@/lib/animations";
 interface SectionHeadingProps {
     /** Small uppercase label above the heading. */
     label: string;
-    /** Main heading content — can include JSX (e.g. a <span> for colour). */
+    /** Main heading content - can include JSX (e.g. a <span> for colour). */
     children: React.ReactNode;
     /** Optional `id` placed on the <h2> (used by aria-labelledby). */
     id?: string;

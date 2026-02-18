@@ -8,7 +8,7 @@ import { SITE } from "@/config/seo";
 import { breadcrumbSchema, faqSchema } from "@/lib/structured-data";
 
 /**
- * Dynamic service page — resolves the :slug param
+ * Dynamic service page - resolves the :slug param
  * and renders the corresponding service content.
  */
 const ServicePage = () => {

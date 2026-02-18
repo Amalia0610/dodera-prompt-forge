@@ -16,7 +16,7 @@ const LIMITS = {
 // Strict email regex – RFC-5321 practical subset
 const EMAIL_RE = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
 
-// Allow digits, spaces, dashes, parens, plus sign — nothing else
+// Allow digits, spaces, dashes, parens, plus sign - nothing else
 // Letters (including accented), spaces, hyphens, apostrophes only
 const NAME_RE = /^[\p{L}\s'\-]+$/u;
 
@@ -101,7 +101,7 @@ export function ContactForm() {
         const form = e.currentTarget;
         const fd = new FormData(form);
 
-        // Honeypot check — bots auto-fill hidden fields
+        // Honeypot check - bots auto-fill hidden fields
         if (fd.get(HONEYPOT_FIELD)) return;
 
         const raw: Record<string, string> = {};
@@ -126,7 +126,7 @@ export function ContactForm() {
         setSubmitCount((c) => c + 1);
         setLastSubmitTime(now);
 
-        // TODO: wire up to backend / email API — send `safe` payload
+        // TODO: wire up to backend / email API - send `safe` payload
         setSubmitted(true);
     }
 
@@ -158,7 +158,7 @@ export function ContactForm() {
             aria-label="Contact form to get in touch with Dodera Software for project inquiries"
             className="mx-auto max-w-lg space-y-5 rounded-xl border border-white/[0.06] bg-white/[0.02] p-8 backdrop-blur-sm"
         >
-            {/* Honeypot — invisible to real users */}
+            {/* Honeypot - invisible to real users */}
             <div className="absolute -left-[9999px] opacity-0" aria-hidden="true">
                 <label htmlFor="website_url">Do not fill this</label>
                 <input type="text" id="website_url" name={HONEYPOT_FIELD} tabIndex={-1} autoComplete="off" />

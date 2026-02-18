@@ -3,7 +3,7 @@
  *
  * Every piece of copy, every link list, every data array that appears in more
  * than one component (or is likely to grow) lives here.  Components import
- * only what they render — zero duplicated literals.
+ * only what they render - zero duplicated literals.
  */
 
 import {
@@ -175,10 +175,10 @@ export const TRUSTED_LOGOS: string[] = [
 export const TERMINAL_LINES: TerminalLine[] = [
     { type: "input", text: "dodera deploy --target production" },
     { type: "output", text: "▸ Building application..." },
-    { type: "output", text: "▸ Running 247 tests — all passed ✓" },
-    { type: "output", text: "▸ Optimizing bundle — 63% smaller" },
+    { type: "output", text: "▸ Running 247 tests - all passed ✓" },
+    { type: "output", text: "▸ Optimizing bundle - 63% smaller" },
     { type: "output", text: "▸ Deploying to 3 regions..." },
     { type: "success", text: "✓ Deployed successfully in 4.2s" },
     { type: "input", text: "dodera status" },
-    { type: "success", text: "✓ All systems operational — 99.99% uptime" },
+    { type: "success", text: "✓ All systems operational - 99.99% uptime" },
 ];

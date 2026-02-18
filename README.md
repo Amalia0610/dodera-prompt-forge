@@ -1,4 +1,4 @@
-# Dodera Software — Website
+# Dodera Software - Website
 
 **Website**: [https://doderasoft.com](https://doderasoft.com)
 

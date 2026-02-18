@@ -15,7 +15,7 @@ const Blog = () => {
     return (
         <div className="min-h-screen bg-background">
             <SEO
-                title="Blog — Engineering Insights & AI Development"
+                title="Blog - Engineering Insights & AI Development"
                 description="Technical articles on AI development, software engineering, SaaS architecture, and documentation best practices from the Dodera Software team."
                 keywords={[
                     "software engineering blog",
@@ -66,7 +66,7 @@ const Blog = () => {
                             className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground"
                         >
                             Deep dives into AI development, software architecture, SaaS best
-                            practices, and technical documentation — from the team that builds
+                            practices, and technical documentation - from the team that builds
                             production systems every day.
                         </motion.p>
                     </div>

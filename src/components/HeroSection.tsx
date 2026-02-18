@@ -13,7 +13,7 @@ export function HeroSection() {
 
       <div className="relative z-10 mx-auto flex min-h-[100dvh] max-w-7xl items-center px-6 py-24 pt-28 sm:pt-24">
         <div className="grid w-full gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-          {/* Left — Copy */}
+          {/* Left - Copy */}
           <div className="flex flex-col gap-5 text-center lg:text-left items-center lg:items-start">
             <motion.h1
               variants={fadeInUp}
@@ -57,7 +57,7 @@ export function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Right — Terminal */}
+          {/* Right - Terminal */}
           <motion.div
             variants={fadeInUpLg}
             initial="hidden"
