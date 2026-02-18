@@ -14,7 +14,7 @@ export function Navbar() {
     <nav aria-label="Main navigation" className="fixed inset-x-0 top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         {/* Logo */}
-        <Link to="/" aria-label="Dodera Software — Home" className="flex items-center gap-2">
+        <Link to="/" aria-label="Dodera Software - Home" className="flex items-center gap-2">
           <Logo />
         </Link>
 

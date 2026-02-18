@@ -13,9 +13,9 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
      * ────────────────────────────────────────────────────── */
     "ai-development": {
         slug: "ai-development",
-        metaTitle: "AI Development Services — Custom Agents & Automations",
+        metaTitle: "AI Development Services - Custom Agents & Automations",
         metaDescription:
-            "We build production-grade AI systems — from custom agents and workflow automations to intelligent data pipelines. Based in Romania, serving clients internationally.",
+            "We build production-grade AI systems - from custom agents and workflow automations to intelligent data pipelines. Based in Romania, serving clients internationally.",
         keywords: [
             "AI development",
             "custom AI agents",
@@ -35,7 +35,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             {
                 title: "Why Invest in AI Development?",
                 content:
-                    "Artificial intelligence is no longer a futuristic concept — it's a competitive necessity. Businesses that adopt AI-driven workflows see measurable gains in efficiency, accuracy, and speed-to-market. Whether you need to automate data processing, build conversational agents, or create intelligent decision-support systems, our team delivers production-ready solutions built on proven architectures.",
+                    "Artificial intelligence is no longer a futuristic concept - it's a competitive necessity. Businesses that adopt AI-driven workflows see measurable gains in efficiency, accuracy, and speed-to-market. Whether you need to automate data processing, build conversational agents, or create intelligent decision-support systems, our team delivers production-ready solutions built on proven architectures.",
                 bullets: [
                     "Reduce manual workload by up to 80% with intelligent automation",
                     "Make data-driven decisions faster with AI-powered analytics",
@@ -46,7 +46,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             {
                 title: "Our AI Development Approach",
                 content:
-                    "We follow a rigorous, phased approach to AI development. Every project begins with a deep audit of your existing systems, data landscape, and business objectives. From there, we architect a solution that integrates seamlessly with your tech stack — no rip-and-replace required. Our iterative development cycles ensure you see value early and often, with continuous feedback loops built into every sprint.",
+                    "We follow a rigorous, phased approach to AI development. Every project begins with a deep audit of your existing systems, data landscape, and business objectives. From there, we architect a solution that integrates seamlessly with your tech stack - no rip-and-replace required. Our iterative development cycles ensure you see value early and often, with continuous feedback loops built into every sprint.",
             },
             {
                 title: "Technologies We Use",
@@ -66,10 +66,10 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
                 content:
                     "Our AI solutions span verticals from fintech and healthcare to logistics and e-commerce. We understand the regulatory and performance requirements of each domain and build systems that meet enterprise-grade compliance and reliability standards.",
                 bullets: [
-                    "Financial services — fraud detection, risk scoring, document processing",
-                    "Healthcare — clinical decision support, medical record indexing",
-                    "E-commerce — personalization engines, inventory forecasting",
-                    "Logistics — route optimization, demand prediction",
+                    "Financial services - fraud detection, risk scoring, document processing",
+                    "Healthcare - clinical decision support, medical record indexing",
+                    "E-commerce - personalization engines, inventory forecasting",
+                    "Logistics - route optimization, demand prediction",
                 ],
             },
         ],
@@ -80,7 +80,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             },
             {
                 question: "Do you work with our existing data infrastructure?",
-                answer: "Absolutely. We design every solution to integrate with your current tech stack — whether that's a legacy SQL database, a modern data lake, or third-party APIs. No rip-and-replace required.",
+                answer: "Absolutely. We design every solution to integrate with your current tech stack - whether that's a legacy SQL database, a modern data lake, or third-party APIs. No rip-and-replace required.",
             },
             {
                 question: "What's the difference between an AI agent and a simple automation?",
@@ -103,9 +103,9 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
      * ────────────────────────────────────────────────────── */
     "custom-ai-agents": {
         slug: "custom-ai-agents",
-        metaTitle: "Custom AI Agents — Autonomous Task Execution",
+        metaTitle: "Custom AI Agents - Autonomous Task Execution",
         metaDescription:
-            "We build custom AI agents that autonomously handle complex tasks — from customer support bots to data-processing pipelines. Production-grade, secure, and scalable.",
+            "We build custom AI agents that autonomously handle complex tasks - from customer support bots to data-processing pipelines. Production-grade, secure, and scalable.",
         keywords: [
             "custom AI agents",
             "autonomous agents",
@@ -119,7 +119,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         heroTitle: "Autonomous Agents that",
         heroHighlight: "Work for You.",
         heroDescription:
-            "We engineer AI agents that reason, act, and learn — handling complex multi-step tasks with minimal human oversight. From customer support to internal operations, your agent works 24/7.",
+            "We engineer AI agents that reason, act, and learn - handling complex multi-step tasks with minimal human oversight. From customer support to internal operations, your agent works 24/7.",
         sections: [
             {
                 title: "What Are Custom AI Agents?",
@@ -137,10 +137,10 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
                 content:
                     "Our clients deploy AI agents across a wide range of business functions. Each agent is purpose-built for the task at hand, with guardrails and monitoring to ensure reliability.",
                 bullets: [
-                    "Customer support — resolve tickets, answer FAQs, escalate complex issues",
-                    "Sales — qualify leads, schedule meetings, draft proposals",
-                    "Operations — process invoices, reconcile data, generate reports",
-                    "Engineering — code review agents, CI/CD pipeline assistants, documentation bots",
+                    "Customer support - resolve tickets, answer FAQs, escalate complex issues",
+                    "Sales - qualify leads, schedule meetings, draft proposals",
+                    "Operations - process invoices, reconcile data, generate reports",
+                    "Engineering - code review agents, CI/CD pipeline assistants, documentation bots",
                 ],
             },
             {
@@ -184,7 +184,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
      * ────────────────────────────────────────────────────── */
     "ai-powered-automations": {
         slug: "ai-powered-automations",
-        metaTitle: "AI-Powered Automations — Intelligent Workflow Automation",
+        metaTitle: "AI-Powered Automations - Intelligent Workflow Automation",
         metaDescription:
             "Automate complex business workflows with AI-powered systems. We build intelligent automations that handle data processing, approvals, notifications, and more.",
         keywords: [
@@ -200,7 +200,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         heroTitle: "Workflows that",
         heroHighlight: "Run Themselves.",
         heroDescription:
-            "We build intelligent automation systems that transform manual, error-prone processes into streamlined, self-executing workflows — saving your team hours every week.",
+            "We build intelligent automation systems that transform manual, error-prone processes into streamlined, self-executing workflows - saving your team hours every week.",
         sections: [
             {
                 title: "What Is AI-Powered Automation?",
@@ -248,7 +248,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             },
             {
                 question: "Can automations handle edge cases and errors?",
-                answer: "Yes. Unlike rigid rule-based systems, our AI-powered automations can reason about exceptions and route them appropriately — either handling them autonomously or escalating to a human reviewer with full context provided.",
+                answer: "Yes. Unlike rigid rule-based systems, our AI-powered automations can reason about exceptions and route them appropriately - either handling them autonomously or escalating to a human reviewer with full context provided.",
             },
             {
                 question: "Do you provide ongoing support after deployment?",
@@ -267,7 +267,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
      * ────────────────────────────────────────────────────── */
     "software-development": {
         slug: "software-development",
-        metaTitle: "Software Development Services — From Idea to Production",
+        metaTitle: "Software Development Services - From Idea to Production",
         metaDescription:
             "End-to-end custom software development. We build MVPs, enterprise platforms, and SaaS products using .NET, Laravel, Nuxt, React, and modern full-stack architectures.",
         keywords: [
@@ -290,7 +290,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             {
                 title: "End-to-End Software Engineering",
                 content:
-                    "We handle every phase of the software development lifecycle — from requirements gathering and system design to implementation, testing, deployment, and long-term maintenance. Our engineering team has deep expertise across frontend, backend, and infrastructure, delivering cohesive solutions that meet enterprise performance standards.",
+                    "We handle every phase of the software development lifecycle - from requirements gathering and system design to implementation, testing, deployment, and long-term maintenance. Our engineering team has deep expertise across frontend, backend, and infrastructure, delivering cohesive solutions that meet enterprise performance standards.",
                 bullets: [
                     "Architecture design and technical specification",
                     "Frontend development (React, Vue, Nuxt, Next.js)",
@@ -303,14 +303,14 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             {
                 title: "Our Tech Stack",
                 content:
-                    "We're opinionated about technology choices because it directly impacts maintainability, performance, and developer velocity. We select the right stack for each project based on your constraints and goals — never a one-size-fits-all approach.",
+                    "We're opinionated about technology choices because it directly impacts maintainability, performance, and developer velocity. We select the right stack for each project based on your constraints and goals - never a one-size-fits-all approach.",
                 bullets: [
-                    ".NET / C# — enterprise backends, microservices, APIs",
-                    "Laravel / PHP — rapid prototyping, admin panels, CMS",
-                    "Nuxt / Vue — server-rendered frontends, SEO-first applications",
-                    "React / Next.js — dynamic SPAs, dashboards, complex UIs",
-                    "TypeScript — end-to-end type safety across the stack",
-                    "PostgreSQL, Redis, Elasticsearch — data layer excellence",
+                    ".NET / C# - enterprise backends, microservices, APIs",
+                    "Laravel / PHP - rapid prototyping, admin panels, CMS",
+                    "Nuxt / Vue - server-rendered frontends, SEO-first applications",
+                    "React / Next.js - dynamic SPAs, dashboards, complex UIs",
+                    "TypeScript - end-to-end type safety across the stack",
+                    "PostgreSQL, Redis, Elasticsearch - data layer excellence",
                 ],
             },
             {
@@ -327,7 +327,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         faqs: [
             {
                 question: "What size projects do you take on?",
-                answer: "We work on projects ranging from focused 4-week MVPs to multi-year enterprise platform builds. Our sweet spot is mid-to-large projects where architecture decisions have real impact — typically €25,000–€300,000+ in scope.",
+                answer: "We work on projects ranging from focused 4-week MVPs to multi-year enterprise platform builds. Our sweet spot is mid-to-large projects where architecture decisions have real impact - typically €25,000–€300,000+ in scope.",
             },
             {
                 question: "Do you work with existing codebases?",
@@ -354,7 +354,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
      * ────────────────────────────────────────────────────── */
     "mvp-to-market": {
         slug: "mvp-to-market",
-        metaTitle: "MVP Development — Go From Idea to Market Fast",
+        metaTitle: "MVP Development - Go From Idea to Market Fast",
         metaDescription:
             "Launch your MVP in weeks, not months. We build lean, functional minimum viable products with modern tech stacks, designed to validate your idea and attract early users.",
         keywords: [
@@ -368,14 +368,14 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         canonical: "/services/mvp-to-market",
         heroLabel: "MVP to Market",
         heroTitle: "From Idea to",
-        heroHighlight: "First Users — Fast.",
+        heroHighlight: "First Users - Fast.",
         heroDescription:
             "We build lean, functional MVPs designed to validate your business hypothesis and attract early adopters. Ship in weeks instead of months with our battle-tested development process.",
         sections: [
             {
                 title: "Why Build an MVP?",
                 content:
-                    "The biggest risk for any new product isn't technical failure — it's building something nobody wants. An MVP lets you test your core hypothesis with real users before investing months or years in full product development. We help you define the smallest feature set that delivers real value, build it fast, and get it into the hands of early adopters.",
+                    "The biggest risk for any new product isn't technical failure - it's building something nobody wants. An MVP lets you test your core hypothesis with real users before investing months or years in full product development. We help you define the smallest feature set that delivers real value, build it fast, and get it into the hands of early adopters.",
                 bullets: [
                     "Validate product-market fit before major investment",
                     "Gather real user feedback to guide your roadmap",
@@ -388,10 +388,10 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
                 content:
                     "Our lean build process is designed for speed without sacrificing code quality. We use proven tech stacks, pre-built components, and battle-tested architectures to deliver a polished MVP in 4–8 weeks.",
                 bullets: [
-                    "Week 1 — Discovery: define scope, user stories, and success criteria",
-                    "Week 2–3 — Architecture: tech stack selection, data modeling, UI/UX wireframes",
-                    "Week 4–6 — Build: agile sprints with daily progress updates",
-                    "Week 7–8 — Polish & Launch: testing, deployment, analytics setup",
+                    "Week 1 - Discovery: define scope, user stories, and success criteria",
+                    "Week 2–3 - Architecture: tech stack selection, data modeling, UI/UX wireframes",
+                    "Week 4–6 - Build: agile sprints with daily progress updates",
+                    "Week 7–8 - Polish & Launch: testing, deployment, analytics setup",
                 ],
             },
             {
@@ -419,7 +419,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             },
             {
                 question: "Can the MVP code scale to a full product?",
-                answer: "Absolutely. We intentionally build MVPs on the same architectures and tech stacks we use for enterprise projects. The codebase is clean, tested, and designed to scale — not throwaway prototype code.",
+                answer: "Absolutely. We intentionally build MVPs on the same architectures and tech stacks we use for enterprise projects. The codebase is clean, tested, and designed to scale - not throwaway prototype code.",
             },
             {
                 question: "Do you help with product strategy and scope definition?",
@@ -438,7 +438,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
      * ────────────────────────────────────────────────────── */
     "enterprise-platforms": {
         slug: "enterprise-platforms",
-        metaTitle: "Enterprise Platform Development — Scalable & Secure",
+        metaTitle: "Enterprise Platform Development - Scalable & Secure",
         metaDescription:
             "We build enterprise-grade platforms that handle millions of transactions, meet compliance standards, and scale with your business. .NET, Laravel, and modern cloud architecture.",
         keywords: [
@@ -487,13 +487,13 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             {
                 title: "Migration & Modernization",
                 content:
-                    "If you're running on legacy technology, we can help you modernize incrementally — no big-bang rewrites. We use the strangler fig pattern to progressively replace legacy components while keeping your business running. It's lower risk, and you see value faster.",
+                    "If you're running on legacy technology, we can help you modernize incrementally - no big-bang rewrites. We use the strangler fig pattern to progressively replace legacy components while keeping your business running. It's lower risk, and you see value faster.",
             },
         ],
         faqs: [
             {
                 question: "How do you handle legacy system migration?",
-                answer: "We use the strangler fig pattern — progressively replacing legacy components with modern equivalents while the old system remains operational. This minimizes risk, avoids downtime, and delivers value incrementally.",
+                answer: "We use the strangler fig pattern - progressively replacing legacy components with modern equivalents while the old system remains operational. This minimizes risk, avoids downtime, and delivers value incrementally.",
             },
             {
                 question: "What compliance standards do you build for?",
@@ -520,9 +520,9 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
      * ────────────────────────────────────────────────────── */
     "saas-products": {
         slug: "saas-products",
-        metaTitle: "SaaS Product Development — Build & Launch Your SaaS",
+        metaTitle: "SaaS Product Development - Build & Launch Your SaaS",
         metaDescription:
-            "We build SaaS products from scratch — multi-tenant architecture, subscription billing, user management, and everything you need to launch and scale a software-as-a-service business.",
+            "We build SaaS products from scratch - multi-tenant architecture, subscription billing, user management, and everything you need to launch and scale a software-as-a-service business.",
         keywords: [
             "SaaS development",
             "SaaS product",
@@ -605,7 +605,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
      * ────────────────────────────────────────────────────── */
     "technical-documentation": {
         slug: "technical-documentation",
-        metaTitle: "Technical Documentation Services — Knowledge Systems & AI-Ready Docs",
+        metaTitle: "Technical Documentation Services - Knowledge Systems & AI-Ready Docs",
         metaDescription:
             "Transform your codebase and internal docs into AI-ready knowledge bases. We build documentation systems that make your team's expertise searchable and actionable.",
         keywords: [
@@ -627,7 +627,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             {
                 title: "Why Documentation Matters",
                 content:
-                    "Poor documentation is one of the biggest hidden costs in software organizations. It leads to duplicated effort, longer onboarding times, tribal knowledge silos, and slower development velocity. We build documentation systems that solve these problems systematically — not just writing docs, but creating the infrastructure that keeps them alive and useful.",
+                    "Poor documentation is one of the biggest hidden costs in software organizations. It leads to duplicated effort, longer onboarding times, tribal knowledge silos, and slower development velocity. We build documentation systems that solve these problems systematically - not just writing docs, but creating the infrastructure that keeps them alive and useful.",
                 bullets: [
                     "Reduce new developer onboarding time by 50–70%",
                     "Eliminate tribal knowledge silos and single points of failure",
@@ -651,18 +651,18 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             {
                 title: "AI-Ready Knowledge Bases",
                 content:
-                    "The next frontier of documentation is making it machine-readable. We structure and index your documentation so it can be consumed by AI coding assistants, internal chatbots, and automated support systems. Your docs become a living, queryable knowledge base — not just static pages gathering dust.",
+                    "The next frontier of documentation is making it machine-readable. We structure and index your documentation so it can be consumed by AI coding assistants, internal chatbots, and automated support systems. Your docs become a living, queryable knowledge base - not just static pages gathering dust.",
             },
             {
                 title: "Documentation as Code",
                 content:
-                    "We treat documentation like code — versioned in Git, reviewed in pull requests, tested in CI, and deployed automatically. This ensures docs stay in sync with your codebase and never become stale. We use tools like Docusaurus, MkDocs, Mintlify, and custom static site generators optimized for developer experience.",
+                    "We treat documentation like code - versioned in Git, reviewed in pull requests, tested in CI, and deployed automatically. This ensures docs stay in sync with your codebase and never become stale. We use tools like Docusaurus, MkDocs, Mintlify, and custom static site generators optimized for developer experience.",
             },
         ],
         faqs: [
             {
                 question: "Can you document an existing codebase?",
-                answer: "Yes. We specialize in reverse-engineering existing codebases to produce comprehensive documentation — from architecture overviews to API references. Our process combines automated code analysis with developer interviews to capture both the 'what' and the 'why'.",
+                answer: "Yes. We specialize in reverse-engineering existing codebases to produce comprehensive documentation - from architecture overviews to API references. Our process combines automated code analysis with developer interviews to capture both the 'what' and the 'why'.",
             },
             {
                 question: "What tools do you use for documentation?",
@@ -674,7 +674,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             },
             {
                 question: "What is AI-ready documentation?",
-                answer: "AI-ready documentation is structured, semantically tagged, and indexed in a way that makes it consumable by AI systems — such as coding assistants, RAG pipelines, and internal chatbots. We optimize your docs for both human readability and machine consumption.",
+                answer: "AI-ready documentation is structured, semantically tagged, and indexed in a way that makes it consumable by AI systems - such as coding assistants, RAG pipelines, and internal chatbots. We optimize your docs for both human readability and machine consumption.",
             },
         ],
         relatedServices: [
@@ -689,9 +689,9 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
      * ────────────────────────────────────────────────────── */
     "documentation-systems": {
         slug: "documentation-systems",
-        metaTitle: "Documentation Systems — Scalable Knowledge Infrastructure",
+        metaTitle: "Documentation Systems - Scalable Knowledge Infrastructure",
         metaDescription:
-            "We build and deploy scalable documentation systems — developer portals, API references, internal wikis, and AI-indexed knowledge bases. Docs that evolve with your product.",
+            "We build and deploy scalable documentation systems - developer portals, API references, internal wikis, and AI-indexed knowledge bases. Docs that evolve with your product.",
         keywords: [
             "documentation systems",
             "developer portal",
@@ -705,12 +705,12 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         heroTitle: "Knowledge Infrastructure that",
         heroHighlight: "Scales With You.",
         heroDescription:
-            "We design and deploy documentation systems that serve as the single source of truth for your organization — developer portals, API references, internal wikis, and AI-indexed knowledge bases.",
+            "We design and deploy documentation systems that serve as the single source of truth for your organization - developer portals, API references, internal wikis, and AI-indexed knowledge bases.",
         sections: [
             {
                 title: "What Are Documentation Systems?",
                 content:
-                    "A documentation system is more than a collection of markdown files. It's the infrastructure — the tooling, workflows, search, navigation, and deployment pipeline — that makes documentation discoverable, maintainable, and useful at scale. We build systems that grow with your team and product complexity.",
+                    "A documentation system is more than a collection of markdown files. It's the infrastructure - the tooling, workflows, search, navigation, and deployment pipeline - that makes documentation discoverable, maintainable, and useful at scale. We build systems that grow with your team and product complexity.",
                 bullets: [
                     "Custom-designed developer portals and documentation sites",
                     "Full-text search with AI-powered semantic search",
@@ -738,7 +738,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             {
                 title: "AI Indexing & Semantic Search",
                 content:
-                    "We embed your documentation into vector databases that power AI-driven search and retrieval. This enables your team (and your AI tools) to find precise answers across thousands of pages of documentation using natural language queries — no more keyword-guessing or scrolling through outdated wikis.",
+                    "We embed your documentation into vector databases that power AI-driven search and retrieval. This enables your team (and your AI tools) to find precise answers across thousands of pages of documentation using natural language queries - no more keyword-guessing or scrolling through outdated wikis.",
             },
         ],
         faqs: [
@@ -752,7 +752,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             },
             {
                 question: "How does AI-powered search work?",
-                answer: "We embed your documentation content into a vector database using AI models. When a user searches, their query is matched against these embeddings to find semantically relevant content — even if the exact keywords don't match. This is far more powerful than traditional keyword search.",
+                answer: "We embed your documentation content into a vector database using AI models. When a user searches, their query is matched against these embeddings to find semantically relevant content - even if the exact keywords don't match. This is far more powerful than traditional keyword search.",
             },
             {
                 question: "Can the documentation system integrate with our codebase?",
