@@ -207,13 +207,13 @@ export function ContactForm() {
                 <div className="space-y-2">
                     <label htmlFor="contact-company" className="flex items-center gap-2 text-sm font-medium">
                         <Building className="size-3.5 text-muted-foreground" />
-                        Company
+                        Company <span className="text-muted-foreground font-normal">(optional)</span>
                     </label>
                     <Input
                         id="contact-company"
                         name="company"
                         autoComplete="organization"
-                        placeholder="Company name (optional)"
+                        placeholder="Company name"
                         maxLength={LIMITS.company.max}
                         aria-invalid={!!errors.company}
                         className="border-white/[0.08] bg-white/[0.03]"
