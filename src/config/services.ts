@@ -53,12 +53,11 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
                 content:
                     "Our AI engineering team works with the latest frameworks and platforms to deliver robust, scalable solutions tailored to your needs.",
                 bullets: [
-                    "OpenAI GPT-4o, Claude, and open-source LLMs (Llama, Mistral)",
-                    "LangChain, LlamaIndex, and custom RAG pipelines",
-                    "Python, TypeScript, and .NET for backend orchestration",
-                    "Vector databases: Pinecone, Weaviate, pgvector",
+                    "OpenAI GPT, Claude, and open-source LLMs (Llama, Mistral)",
+                    "Laravel, Node.js, and Java for backend orchestration",
+                    "Databases: MySQL, PostgreSQL, MongoDB",
                     "MCP (Model Context Protocol) server architecture",
-                    "Cloud deployment on AWS, Azure, and GCP",
+                    "Cloud deployment on AWS and Azure",
                 ],
             },
             {
@@ -87,8 +86,8 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
                 answer: "An automation follows a predefined set of rules (if X, then Y). An AI agent uses language models and reasoning to make context-aware decisions, handle ambiguous inputs, and adapt to new situations without explicit programming for each case.",
             },
             {
-                question: "Can you fine-tune models on our proprietary data?",
-                answer: "Yes. We offer fine-tuning services for both open-source and commercial LLMs, as well as Retrieval-Augmented Generation (RAG) pipelines that ground model outputs in your company's knowledge base.",
+                question: "Do you provide ongoing support after deployment?",
+                answer: "Yes. We offer maintenance and support packages that include monitoring, updates, and improvements to ensure your AI solution continues to perform optimally as your business evolves.",
             },
         ],
         relatedServices: [
