@@ -13,28 +13,100 @@ export function ProcessSection() {
           From zero to <span className="text-primary">production</span>
         </SectionHeading>
 
-        <div className="relative grid gap-8 sm:grid-cols-2 md:grid-cols-4">
-          {/* Connector line */}
-          <div className="absolute left-[calc(12.5%+24px)] right-[calc(12.5%+24px)] top-8 hidden h-px border-t border-dashed border-border md:block" />
+        {/* Desktop: horizontal flow */}
+        <div className="hidden md:block">
+          <div className="relative flex items-start">
+            {PROCESS_STEPS.map((step, i) => (
+              <div key={step.title} className="group relative flex flex-1 flex-col items-center">
+                {/* ── Glowing dot ── */}
+                <motion.div
+                  initial={{ scale: 0, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={viewportOnce}
+                  transition={{ type: "spring", stiffness: 300, damping: 22, delay: i * 0.12 }}
+                  className="relative z-10"
+                >
+                  <div className="size-3.5 rounded-full border-2 border-primary/40 bg-primary/20 transition-all duration-500 group-hover:border-primary group-hover:bg-primary group-hover:shadow-[0_0_20px_rgba(225,67,43,0.6)]" />
+                </motion.div>
 
-          {PROCESS_STEPS.map((step, i) => (
-            <motion.div
-              key={step.title}
-              variants={fadeInUpLg}
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportOnce}
-              transition={stagger(i)}
-              className="relative text-center"
-            >
-              <div className="relative z-10 mx-auto mb-5 flex size-14 items-center justify-center rounded-xl border border-border bg-card">
-                <step.icon className="size-6 text-primary" />
+                {/* ── Arrow line to next dot ── */}
+                {i < PROCESS_STEPS.length - 1 && (
+                  <div className="absolute left-[50%] top-[6px] -z-0 h-px w-full">
+                    {/* Base line */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/[0.06] via-white/[0.10] to-white/[0.06] transition-all duration-500 group-hover:from-primary/20 group-hover:via-primary/40 group-hover:to-primary/20" />
+                    {/* Glow overlay */}
+                    <div className="absolute inset-0 opacity-0 blur-[3px] transition-opacity duration-500 group-hover:opacity-100 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+                    {/* Animated pulse */}
+                    <motion.div
+                      className="absolute top-[-1px] h-[3px] w-8 rounded-full bg-primary/60 opacity-0 blur-[2px] group-hover:opacity-100"
+                      animate={{ x: [0, 200, 0] }}
+                      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: i * 0.5 }}
+                    />
+                    {/* Arrowhead */}
+                    <div className="absolute -top-[4px] right-0 size-0 border-y-[5px] border-l-[7px] border-y-transparent border-l-white/[0.10] transition-all duration-500 group-hover:border-l-primary/50" />
+                  </div>
+                )}
+
+                {/* ── Text content ── */}
+                <motion.div
+                  variants={fadeInUpLg}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={viewportOnce}
+                  transition={stagger(i)}
+                  className="mt-8 text-center"
+                >
+                  <h3 className="text-base font-bold transition-colors duration-300 group-hover:text-primary">
+                    {step.title}
+                  </h3>
+                  <p className="mx-auto mt-2 max-w-[200px] text-sm leading-relaxed text-muted-foreground transition-colors duration-300 group-hover:text-muted-foreground/80">
+                    {step.description}
+                  </p>
+                </motion.div>
               </div>
-              <h3 className="text-lg font-bold">{step.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {step.description}
-              </p>
-            </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Mobile: vertical flow */}
+        <div className="flex flex-col md:hidden">
+          {PROCESS_STEPS.map((step, i) => (
+            <div key={step.title} className="group relative flex gap-5">
+              {/* Vertical track */}
+              <div className="flex flex-col items-center">
+                <motion.div
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={viewportOnce}
+                  transition={{ type: "spring", stiffness: 300, damping: 22, delay: i * 0.1 }}
+                  className="relative z-10 mt-1"
+                >
+                  <div className="size-3 rounded-full border-2 border-primary/40 bg-primary/20 transition-all duration-500 group-hover:border-primary group-hover:bg-primary group-hover:shadow-[0_0_16px_rgba(225,67,43,0.5)]" />
+                </motion.div>
+                {i < PROCESS_STEPS.length - 1 && (
+                  <div className="relative w-px flex-1 bg-white/[0.08] transition-colors duration-500 group-hover:bg-primary/30">
+                    <div className="absolute inset-0 w-px opacity-0 blur-[2px] transition-opacity duration-500 group-hover:opacity-100 bg-primary/40" />
+                  </div>
+                )}
+              </div>
+
+              {/* Content */}
+              <motion.div
+                variants={fadeInUpLg}
+                initial="hidden"
+                whileInView="visible"
+                viewport={viewportOnce}
+                transition={stagger(i)}
+                className="pb-10"
+              >
+                <h3 className="text-base font-bold transition-colors duration-300 group-hover:text-primary">
+                  {step.title}
+                </h3>
+                <p className="mt-1.5 max-w-xs text-sm leading-relaxed text-muted-foreground">
+                  {step.description}
+                </p>
+              </motion.div>
+            </div>
           ))}
         </div>
       </div>
