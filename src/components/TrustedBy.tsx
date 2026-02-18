@@ -7,7 +7,7 @@ export function TrustedBy() {
     <section aria-label="Trusted by" className="relative border-y border-border/50 py-16">
       <div className="mx-auto max-w-7xl px-6">
         <p className="mb-10 text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-          Trusted by forward-thinking teams
+          Using globally trusted platforms like
         </p>
 
         {/* Social Media Icons - Absolutely positioned */}

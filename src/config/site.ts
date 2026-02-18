@@ -161,12 +161,13 @@ export const FOOTER_LINK_GROUPS: FooterLinkGroup[] = [
 // ── Trusted-by logos ────────────────────────────────────
 
 export const TRUSTED_LOGOS: string[] = [
-    "Google",
-    "Microsoft",
-    "Amazon",
-    "Meta",
-    "Stripe",
+    "Vue",
+    "React",
+    "Next.js",
+    "Nuxt",
+    "Laravel",
     "Vercel",
+    "Stripe",
 ];
 
 // ── Terminal lines ──────────────────────────────────────
