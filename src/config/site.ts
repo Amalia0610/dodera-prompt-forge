@@ -90,27 +90,27 @@ export const SERVICES: Service[] = [
 export const PROCESS_STEPS: ProcessStep[] = [
     {
         icon: Search,
-        title: "Audit",
+        title: "Understand Your Vision",
         description:
-            "Deep-dive into your codebase, infrastructure, and business goals to identify opportunities and risks.",
+            "We listen first. Deep-dive into your goals, challenges, and users to build a roadmap that makes sense.",
     },
     {
         icon: Layers,
-        title: "Architecture",
+        title: "Design the Blueprint",
         description:
-            "Design a robust, scalable architecture with clear milestones and technical specifications.",
+            "Every great product starts with solid architecture. We plan every layer before writing a single line of code.",
     },
     {
         icon: Zap,
-        title: "Agile Sprint",
+        title: "Build & Iterate",
         description:
-            "Rapid, iterative development cycles with continuous delivery and stakeholder feedback loops.",
+            "Rapid development in focused sprints. You see real progress every week, with room to refine as we go.",
     },
     {
         icon: Handshake,
-        title: "Handover",
+        title: "Ship & Support",
         description:
-            "Complete documentation, knowledge transfer, and ongoing support to ensure long-term success.",
+            "We deliver production-ready code, full documentation, and stay with you long after launch.",
     },
 ];
 
