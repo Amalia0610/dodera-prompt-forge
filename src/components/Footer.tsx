@@ -1,18 +1,39 @@
+import { useState } from "react";
 import { Separator } from "@/components/ui/separator";
-import { Globe, Mail, MapPin, Heart } from "lucide-react";
+import { Globe, Mail, MapPin, Heart, Send, AlertCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Logo } from "@/components/Logo";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { COMPANY, FOOTER_LINK_GROUPS, SOCIAL_LINKS } from "@/config/site";
 
+const EMAIL_RE = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
+
 export function Footer() {
+  const [nlEmail, setNlEmail] = useState("");
+  const [nlStatus, setNlStatus] = useState<"idle" | "error" | "success">("idle");
+  const [nlError, setNlError] = useState("");
+
+  function handleNewsletterSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const email = nlEmail.trim();
+    if (!email || email.length > 254 || !EMAIL_RE.test(email)) {
+      setNlStatus("error");
+      setNlError("Please enter a valid email address.");
+      return;
+    }
+    // TODO: wire up to newsletter API
+    setNlStatus("success");
+    setNlError("");
+  }
   return (
     <footer role="contentinfo">
       <Separator />
 
       <div className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-5">
           {/* Brand */}
-          <div className="lg:col-span-2">
+          <div>
             <div className="mb-4">
               <Logo />
             </div>
@@ -91,6 +112,49 @@ export function Footer() {
               </ul>
             </div>
           ))}
+          {/* Newsletter */}
+          <div>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+              Newsletter
+            </p>
+            <p className="mb-4 text-sm text-foreground/60">
+              Updates & insights, no spam.
+            </p>
+
+            {nlStatus === "success" ? (
+              <p className="flex items-center gap-2 text-sm text-emerald-400">
+                <Send className="size-3.5" />
+                Subscribed!
+              </p>
+            ) : (
+              <form onSubmit={handleNewsletterSubmit} noValidate className="space-y-2">
+                <Input
+                  type="email"
+                  name="newsletter-email"
+                  autoComplete="email"
+                  placeholder="Enter your email"
+                  maxLength={254}
+                  value={nlEmail}
+                  onChange={(e) => {
+                    setNlEmail(e.target.value);
+                    if (nlStatus === "error") setNlStatus("idle");
+                  }}
+                  aria-label="Email address for newsletter"
+                  aria-invalid={nlStatus === "error"}
+                  className="border-white/[0.08] bg-white/[0.03]"
+                />
+                {nlStatus === "error" && (
+                  <p className="flex items-center gap-1 text-xs text-red-400">
+                    <AlertCircle className="size-3 shrink-0" /> {nlError}
+                  </p>
+                )}
+                <Button type="submit" variant="default" size="sm" className="w-full">
+                  Subscribe
+                  <Send className="ml-2 size-3" />
+                </Button>
+              </form>
+            )}
+          </div>
         </div>
       </div>
 
