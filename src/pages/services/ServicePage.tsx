@@ -8,16 +8,41 @@ import { SITE } from "@/config/seo";
 import { breadcrumbSchema, faqSchema } from "@/lib/structured-data";
 
 /**
- * Dynamic service page - resolves the :slug param
+ * Dynamic service page - resolves the :slug (and optional :parentSlug) param
  * and renders the corresponding service content.
  */
 const ServicePage = () => {
-    const { slug } = useParams<{ slug: string }>();
-    const data = slug ? SERVICE_PAGES[slug] : undefined;
+    const { slug, parentSlug } = useParams<{ slug: string; parentSlug?: string }>();
+
+    // Build the lookup key: "parent/child" for nested routes, "slug" for parent routes
+    const key = parentSlug && slug ? `${parentSlug}/${slug}` : slug;
+    const data = key ? SERVICE_PAGES[key] : undefined;
 
     if (!data) {
         return <Navigate to="/404" replace />;
     }
+
+    // Build breadcrumb items
+    const breadcrumbItems: { name: string; url: string }[] = [
+        { name: "Home", url: SITE.url },
+        { name: "Services", url: `${SITE.url}/#services` },
+    ];
+
+    // If this is a child service, add parent to breadcrumbs
+    if (data.parentSlug) {
+        const parentData = SERVICE_PAGES[data.parentSlug];
+        if (parentData) {
+            breadcrumbItems.push({
+                name: parentData.heroLabel,
+                url: `${SITE.url}/services/${data.parentSlug}`,
+            });
+        }
+    }
+
+    breadcrumbItems.push({
+        name: data.heroLabel,
+        url: `${SITE.url}${data.canonical}`,
+    });
 
     return (
         <div className="min-h-screen bg-background">
@@ -27,11 +52,7 @@ const ServicePage = () => {
                 keywords={data.keywords}
                 canonical={data.canonical}
                 structuredData={[
-                    breadcrumbSchema([
-                        { name: "Home", url: SITE.url },
-                        { name: "Services", url: `${SITE.url}/#services` },
-                        { name: data.heroLabel, url: `${SITE.url}${data.canonical}` },
-                    ]),
+                    breadcrumbSchema(breadcrumbItems),
                     ...(data.faqs.length > 0
                         ? [faqSchema(data.faqs)]
                         : []),
