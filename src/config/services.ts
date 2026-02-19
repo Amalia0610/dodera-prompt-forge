@@ -6,6 +6,8 @@
  */
 
 import type { ServicePageData } from "@/types";
+import { Bot, Workflow, Rocket, Building2, Cloud, BookOpen } from "lucide-react";
+import { N8nIcon } from "@/components/icons/N8nIcon";
 
 export const SERVICE_PAGES: Record<string, ServicePageData> = {
     /* ──────────────────────────────────────────────────────
@@ -55,6 +57,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
                 bullets: [
                     "OpenAI GPT, Claude, and open-source LLMs (Llama, Mistral)",
                     "Laravel, Node.js, and Java for backend orchestration",
+                    "n8n for workflow automation and task orchestration",
                     "Databases: MySQL, PostgreSQL, MongoDB",
                     "MCP (Model Context Protocol) server architecture",
                     "Cloud deployment on AWS and Azure",
@@ -70,6 +73,21 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
                     "E-commerce - personalization engines, inventory forecasting",
                     "Logistics - route optimization, demand prediction",
                 ],
+            },
+        ],
+        childServices: [
+            {
+                icon: Bot,
+                label: "Custom AI Agents",
+                description: "We engineer autonomous AI agents that reason, act, and learn - handling complex multi-step tasks with minimal human oversight so your team can focus on what matters.",
+                href: "/services/ai-development/custom-ai-agents",
+            },
+            {
+                icon: Workflow,
+                customIcon: N8nIcon,
+                label: "AI Powered Automations",
+                description: "We build intelligent automation systems powered by n8n and AI that transform manual, error-prone processes into streamlined, self-executing workflows.",
+                href: "/services/ai-development/ai-powered-automations",
             },
         ],
         faqs: [
@@ -128,7 +146,6 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
                 bullets: [
                     "Multi-step reasoning and planning capabilities",
                     "Tool-use and API integration (databases, CRMs, ERPs)",
-                    "Retrieval-augmented generation for grounded answers",
                     "Human-in-the-loop escalation for edge cases",
                 ],
             },
@@ -151,7 +168,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             {
                 title: "Security & Compliance",
                 content:
-                    "Every agent we build follows security best practices. We implement role-based access controls, audit logging, prompt injection defenses, and data encryption at rest and in transit. For regulated industries, we ensure compliance with relevant standards (SOC 2, HIPAA, GDPR).",
+                    "Every agent we build follows security best practices. We implement role-based access controls, audit logging, prompt injection defenses, and data encryption at rest and in transit.",
             },
         ],
         faqs: [
@@ -160,16 +177,16 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
                 answer: "AI agents are designed to augment your team, not replace it. They handle repetitive, time-consuming tasks so your people can focus on strategic, creative, and relationship-driven work. Most clients see their agents handling 60–80% of routine queries while humans manage complex escalations.",
             },
             {
-                question: "How do you prevent hallucinations in AI agents?",
-                answer: "We use Retrieval-Augmented Generation (RAG) to ground agent responses in your verified data, combined with confidence scoring, citation tracking, and human-in-the-loop review for high-stakes decisions. Our agents know when they don't know.",
+                question: "Can AI agents integrate with our existing systems?",
+                answer: "Yes. Our agents are designed to integrate seamlessly with your existing tech stack - whether that's CRMs like Salesforce, communication tools like Slack, databases, APIs, or custom internal systems. We build robust integrations that ensure your agent can access the data and tools it needs to perform its tasks effectively.",
             },
             {
                 question: "What LLMs do you use for agents?",
-                answer: "We work with OpenAI GPT-4o, Anthropic Claude, and open-source models like Llama and Mistral. The choice depends on your requirements for performance, cost, data privacy, and latency.",
+                answer: "We work with OpenAI GPT, Anthropic Claude, and open-source models like Llama and Mistral. The choice depends on your requirements for performance, cost, data privacy, and latency.",
             },
             {
-                question: "How much does a custom AI agent cost?",
-                answer: "Pricing depends on the agent's complexity, integrations, and deployment requirements. A focused single-purpose agent starts around €5,000–€10,000, while enterprise multi-agent systems can range from €25,000–€75,000+. We provide a detailed quote after our initial audit.",
+                question: "How long does it take to build a custom AI agent?",
+                answer: "Development timelines vary based on complexity and scope. A focused single-purpose agent typically takes 3–6 weeks from requirements to deployment, while more sophisticated multi-agent systems with extensive integrations can take 8–16 weeks. We provide a detailed timeline after our initial capability audit.",
             },
         ],
         relatedServices: [
@@ -217,7 +234,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             {
                 title: "Common Automation Use Cases",
                 content:
-                    "From back-office operations to customer-facing processes, our automations deliver measurable ROI across every department.",
+                    "From back-office operations to customer-facing processes, our automations streamline workflows and eliminate manual work across every department.",
                 bullets: [
                     "Invoice processing and accounts payable automation",
                     "Employee onboarding and HR workflow automation",
@@ -233,9 +250,9 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
                     "Our automations are designed to plug into the tools you already use. Whether it's Slack, Salesforce, HubSpot, Jira, or your custom ERP, we build robust integrations that ensure data flows seamlessly across your entire tech stack. No silos, no manual data entry, no context-switching.",
             },
             {
-                title: "Measuring Automation ROI",
+                title: "Automation Tools & Platforms",
                 content:
-                    "Every automation we ship includes built-in analytics and dashboards so you can measure the real impact. We track key metrics like time saved per process, error rate reduction, throughput improvements, and cost per transaction. Most clients see full ROI within 2–4 months of deployment.",
+                    "We leverage powerful automation platforms like n8n to build, deploy, and manage intelligent workflows. n8n gives us the flexibility to create complex automation logic, connect to hundreds of APIs, and build custom integrations tailored to your exact requirements. Combined with AI capabilities, we transform standard workflow automation into intelligent systems that adapt and learn.",
             },
         ],
         faqs: [
@@ -244,8 +261,8 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
                 answer: "Tools like Zapier are great for simple if-then integrations. AI-powered automation handles complex, multi-step workflows that involve unstructured data, judgment calls, and contextual decision-making. Think of it as the difference between a simple email filter and a trained operations assistant.",
             },
             {
-                question: "What's the typical ROI timeline for automation projects?",
-                answer: "Most clients see measurable ROI within 2–4 months. A well-scoped automation typically saves 10–40 hours per week of manual work, which compounds quickly into significant cost savings and productivity gains.",
+                question: "How long does it take to implement an automation?",
+                answer: "Implementation timelines depend on the complexity of the workflow and integrations required. Simple automations can be deployed in 2–4 weeks, while more complex multi-system automations typically take 6–10 weeks from requirements to production deployment.",
             },
             {
                 question: "Can automations handle edge cases and errors?",
@@ -325,10 +342,30 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
                     "Shipping is just the beginning. We offer ongoing maintenance, performance monitoring, and iterative feature development. Our support packages are designed to keep your application healthy, secure, and evolving with your business needs.",
             },
         ],
+        childServices: [
+            {
+                icon: Rocket,
+                label: "MVP to Market",
+                description: "Go from idea to first users fast. We build lean, functional MVPs designed to validate your business hypothesis and ship in weeks, not months.",
+                href: "/services/software-development/mvp-to-market",
+            },
+            {
+                icon: Building2,
+                label: "Enterprise Platforms",
+                description: "Platforms built for scale. We architect enterprise systems that handle millions of transactions and meet strict compliance and availability standards.",
+                href: "/services/software-development/enterprise-platforms",
+            },
+            {
+                icon: Cloud,
+                label: "SaaS Products",
+                description: "Launch your SaaS with multi-tenant architecture, subscription billing, and the operational tooling you need to scale from first customer to thousands.",
+                href: "/services/software-development/saas-products",
+            },
+        ],
         faqs: [
             {
                 question: "What size projects do you take on?",
-                answer: "We work on projects ranging from focused 4-week MVPs to multi-year enterprise platform builds. Our sweet spot is mid-to-large projects where architecture decisions have real impact - typically €25,000–€300,000+ in scope.",
+                answer: "We work on projects ranging from focused 4-week MVPs to multi-year enterprise platform builds. Our sweet spot is mid-to-large projects where architecture decisions, scalability, and long-term maintainability have real impact on your business success.",
             },
             {
                 question: "Do you work with existing codebases?",
@@ -416,8 +453,8 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
                 answer: "Most MVPs take 4–8 weeks from kickoff to launch, depending on complexity. A simple SaaS tool might take 4–5 weeks, while a marketplace or platform with multiple user roles could take 6–8 weeks.",
             },
             {
-                question: "How much does an MVP cost?",
-                answer: "MVP projects typically range from €10,000–€35,000 depending on scope and complexity. We provide a fixed-price quote after our discovery session so there are no surprises.",
+                question: "What's included in your MVP development process?",
+                answer: "Our MVP process includes discovery and requirements gathering, technical architecture design, agile development sprints, comprehensive testing, deployment to production, and post-launch support. You get production-ready code, full documentation, and analytics setup to measure traction from day one.",
             },
             {
                 question: "Can the MVP code scale to a full product?",
@@ -661,6 +698,14 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
                 title: "Documentation as Code",
                 content:
                     "We treat documentation like code - versioned in Git, reviewed in pull requests, tested in CI, and deployed automatically. This ensures docs stay in sync with your codebase and never become stale. We use tools like Docusaurus, MkDocs, Mintlify, and custom static site generators optimized for developer experience.",
+            },
+        ],
+        childServices: [
+            {
+                icon: BookOpen,
+                label: "Documentation Systems",
+                description: "We design and deploy scalable documentation infrastructure - developer portals, API references, internal wikis, and AI-indexed knowledge bases that grow with your team.",
+                href: "/services/technical-documentation/documentation-systems",
             },
         ],
         faqs: [

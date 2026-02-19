@@ -32,6 +32,17 @@ export interface ServicePageFAQ {
     answer: string;
 }
 
+export interface ChildServiceCard {
+    icon: LucideIcon;
+    label: string;
+    description: string;
+    href: string;
+    /** Optional custom icon component (overrides icon if provided) */
+    customIcon?: React.ComponentType<{ className?: string }>;
+    /** Optional text to show next to icon */
+    iconText?: string;
+}
+
 export interface ServicePageData {
     slug: string;
     /** Slug of the parent service (only set on child / sub-service pages). */
@@ -45,6 +56,8 @@ export interface ServicePageData {
     heroHighlight: string;
     heroDescription: string;
     sections: ServicePageSection[];
+    /** Cards shown on parent pages to link to child sub-services. */
+    childServices?: ChildServiceCard[];
     faqs: ServicePageFAQ[];
     relatedServices: { label: string; href: string }[];
 }
