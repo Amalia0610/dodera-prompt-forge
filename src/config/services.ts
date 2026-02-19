@@ -312,10 +312,10 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
                 bullets: [
                     "Architecture design and technical specification",
                     "Frontend development (React, Vue, Nuxt, Next.js)",
-                    "Backend development (.NET, Laravel, Node.js, Python)",
+                    "Backend development (Laravel, Node.js)",
                     "Database design and optimization (PostgreSQL, MySQL, MongoDB)",
                     "CI/CD pipelines and automated testing",
-                    "Cloud infrastructure and DevOps (AWS, Azure, GCP)",
+                    "Cloud infrastructure and DevOps (AWS, Azure)",
                 ],
             },
             {
@@ -323,7 +323,6 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
                 content:
                     "We're opinionated about technology choices because it directly impacts maintainability, performance, and developer velocity. We select the right stack for each project based on your constraints and goals - never a one-size-fits-all approach.",
                 bullets: [
-                    ".NET / C# - enterprise backends, microservices, APIs",
                     "Laravel / PHP - rapid prototyping, admin panels, CMS",
                     "Nuxt / Vue - server-rendered frontends, SEO-first applications",
                     "React / Next.js - dynamic SPAs, dashboards, complex UIs",
@@ -335,6 +334,11 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
                 title: "Quality & Testing",
                 content:
                     "Quality is not an afterthought. We write comprehensive automated tests, perform code reviews on every pull request, and maintain strict CI/CD pipelines that prevent regressions. Our standard test suite covers unit tests, integration tests, and end-to-end tests with tools like Vitest, Playwright, and xUnit.",
+            },
+            {
+                title: "Beyond Development",
+                content:
+                    "Rigorous code is our foundation, but successful projects require more. We provide project management to keep timelines on track, n8n-powered automation workflows to streamline operations, content scaling strategies, and web analytics implementation to measure what matters.",
             },
             {
                 title: "Post-Launch Support",
@@ -423,17 +427,6 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
                 ],
             },
             {
-                title: "Our MVP Process",
-                content:
-                    "Our lean build process is designed for speed without sacrificing code quality. We use proven tech stacks, pre-built components, and battle-tested architectures to deliver a polished MVP in 4–8 weeks.",
-                bullets: [
-                    "Week 1 - Discovery: define scope, user stories, and success criteria",
-                    "Week 2–3 - Architecture: tech stack selection, data modeling, UI/UX wireframes",
-                    "Week 4–6 - Build: agile sprints with daily progress updates",
-                    "Week 7–8 - Polish & Launch: testing, deployment, analytics setup",
-                ],
-            },
-            {
                 title: "What You Get",
                 content:
                     "Your MVP isn't throwaway code. We build on solid foundations so you can scale without rewriting. Every MVP we deliver includes production-grade infrastructure, automated testing, CI/CD, and comprehensive documentation.",
@@ -505,7 +498,6 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
                     "99.9%+ uptime with multi-region deployment",
                     "Horizontal scaling and auto-provisioning",
                     "Role-based access control and audit logging",
-                    "SOC 2, GDPR, and HIPAA compliance readiness",
                 ],
             },
             {
@@ -794,7 +786,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         faqs: [
             {
                 question: "What platforms do you build documentation systems on?",
-                answer: "We work with Docusaurus, MkDocs, Mintlify, GitBook, Notion (as a CMS), and fully custom solutions built with Next.js or Nuxt. The platform choice depends on your team's needs, existing tooling, and scale requirements.",
+                answer: "We build custom documentation solutions using our own automated workflow powered by MCP tools and Claude Code. This approach gives us full control over content generation, structure, and integration with your codebase, delivering documentation that stays in sync with your actual implementation.",
             },
             {
                 question: "Can you migrate our existing documentation?",
