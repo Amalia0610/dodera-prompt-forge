@@ -162,6 +162,64 @@ export function ServicePageLayout({ data }: ServicePageLayoutProps) {
                 </section>
             ))}
 
+            {/* ── Child Services Showcase ─────────────────────── */}
+            {data.childServices && data.childServices.length > 0 && (
+                <section aria-labelledby="subservices-heading" className="relative py-20 bg-card/30">
+                    <div className="mx-auto max-w-5xl px-6">
+                        <motion.div
+                            variants={fadeInUp}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={viewportOnce}
+                            className="mb-12 text-center"
+                        >
+                            <h2
+                                id="subservices-heading"
+                                className="text-3xl font-bold tracking-tight sm:text-4xl"
+                            >
+                                Our {data.heroLabel} Services
+                            </h2>
+                        </motion.div>
+
+                        <div className={`grid gap-6 ${data.childServices.length === 1 ? "max-w-lg mx-auto" : data.childServices.length === 2 ? "sm:grid-cols-2" : "sm:grid-cols-3"}`}>
+                            {data.childServices.map((child, i) => (
+                                <motion.div
+                                    key={child.href}
+                                    variants={fadeInUpLg}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={viewportOnce}
+                                    transition={stagger(i)}
+                                >
+                                    <Link
+                                        to={child.href}
+                                        className="group flex h-full flex-col rounded-xl border border-white/[0.06] bg-white/[0.02] p-6 backdrop-blur-sm transition-all hover:border-white/[0.12] hover:bg-white/[0.04]"
+                                    >
+                                        <div className="mb-6 flex size-12 items-center justify-center rounded-lg border border-white/[0.06] bg-white/[0.04]">
+                                            {child.customIcon ? (
+                                                <child.customIcon className="size-6 text-primary" />
+                                            ) : (
+                                                <child.icon className="size-6 text-primary" />
+                                            )}
+                                        </div>
+                                        <h3 className="mb-2 text-lg font-semibold group-hover:text-primary transition-colors">
+                                            {child.label}
+                                        </h3>
+                                        <p className="mb-4 flex-1 text-sm leading-relaxed text-muted-foreground">
+                                            {child.description}
+                                        </p>
+                                        <span className="inline-flex items-center gap-1 text-sm font-medium text-primary">
+                                            Learn more
+                                            <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+                                        </span>
+                                    </Link>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
+
             {/* ── FAQ Section ─────────────────────────────────── */}
             {data.faqs.length > 0 && (
                 <section aria-labelledby="faq-heading" className="relative py-20">
