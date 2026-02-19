@@ -52,8 +52,8 @@ export const SERVICES: Service[] = [
             "Automate repetitive tasks and workflows with custom AI agents. We build intelligent systems that handle daily operations, data processing, and decision-making at scale.",
         tags: ["Workflow Automation", "AI Agents", "Process Optimization"],
         highlights: [
-            { label: "Custom AI Agents", href: "/services/custom-ai-agents" },
-            { label: "AI Powered Automations", href: "/services/ai-powered-automations" },
+            { label: "Custom AI Agents", href: "/services/ai-development/custom-ai-agents" },
+            { label: "AI Powered Automations", href: "/services/ai-development/ai-powered-automations" },
         ],
         href: "/services/ai-development",
     },
@@ -65,9 +65,9 @@ export const SERVICES: Service[] = [
             "Launch your digital product with confidence. We handle everything from MVP development to enterprise-grade platforms using proven tech stacks.",
         tags: ["Laravel", "Nuxt", "Full-Stack"],
         highlights: [
-            { label: "MVP to Market", href: "/services/mvp-to-market" },
-            { label: "Enterprise Platforms", href: "/services/enterprise-platforms" },
-            { label: "SaaS Products", href: "/services/saas-products" },
+            { label: "MVP to Market", href: "/services/software-development/mvp-to-market" },
+            { label: "Enterprise Platforms", href: "/services/software-development/enterprise-platforms" },
+            { label: "SaaS Products", href: "/services/software-development/saas-products" },
         ],
         href: "/services/software-development",
     },
@@ -79,7 +79,7 @@ export const SERVICES: Service[] = [
             "Transform your codebase and internal docs into AI-ready knowledge bases. Make your team's expertise searchable, accessible, and actionable.",
         tags: ["Knowledge Indexing", "AI Context", "Documentation"],
         highlights: [
-            { label: "Documentation Systems", href: "/services/documentation-systems" },
+            { label: "Documentation Systems", href: "/services/technical-documentation/documentation-systems" },
         ],
         href: "/services/technical-documentation",
     },

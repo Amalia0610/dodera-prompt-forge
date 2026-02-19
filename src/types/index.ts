@@ -34,6 +34,8 @@ export interface ServicePageFAQ {
 
 export interface ServicePageData {
     slug: string;
+    /** Slug of the parent service (only set on child / sub-service pages). */
+    parentSlug?: string;
     metaTitle: string;
     metaDescription: string;
     keywords: string[];

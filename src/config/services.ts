@@ -91,8 +91,8 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             },
         ],
         relatedServices: [
-            { label: "Custom AI Agents", href: "/services/custom-ai-agents" },
-            { label: "AI Powered Automations", href: "/services/ai-powered-automations" },
+            { label: "Custom AI Agents", href: "/services/ai-development/custom-ai-agents" },
+            { label: "AI Powered Automations", href: "/services/ai-development/ai-powered-automations" },
             { label: "Technical Documentation", href: "/services/technical-documentation" },
         ],
     },
@@ -100,8 +100,9 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     /* ──────────────────────────────────────────────────────
      * Custom AI Agents
      * ────────────────────────────────────────────────────── */
-    "custom-ai-agents": {
+    "ai-development/custom-ai-agents": {
         slug: "custom-ai-agents",
+        parentSlug: "ai-development",
         metaTitle: "Custom AI Agents - Autonomous Task Execution",
         metaDescription:
             "We build custom AI agents that autonomously handle complex tasks - from customer support bots to data-processing pipelines. Production-grade, secure, and scalable.",
@@ -113,7 +114,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             "AI task automation",
             "intelligent agents",
         ],
-        canonical: "/services/custom-ai-agents",
+        canonical: "/services/ai-development/custom-ai-agents",
         heroLabel: "Custom AI Agents",
         heroTitle: "Autonomous Agents that",
         heroHighlight: "Work for You.",
@@ -173,7 +174,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         ],
         relatedServices: [
             { label: "AI Development", href: "/services/ai-development" },
-            { label: "AI Powered Automations", href: "/services/ai-powered-automations" },
+            { label: "AI Powered Automations", href: "/services/ai-development/ai-powered-automations" },
             { label: "Software Development", href: "/services/software-development" },
         ],
     },
@@ -181,8 +182,9 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     /* ──────────────────────────────────────────────────────
      * AI Powered Automations
      * ────────────────────────────────────────────────────── */
-    "ai-powered-automations": {
+    "ai-development/ai-powered-automations": {
         slug: "ai-powered-automations",
+        parentSlug: "ai-development",
         metaTitle: "AI-Powered Automations - Intelligent Workflow Automation",
         metaDescription:
             "Automate complex business workflows with AI-powered systems. We build intelligent automations that handle data processing, approvals, notifications, and more.",
@@ -194,7 +196,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             "AI workflows",
             "robotic process automation",
         ],
-        canonical: "/services/ai-powered-automations",
+        canonical: "/services/ai-development/ai-powered-automations",
         heroLabel: "AI-Powered Automations",
         heroTitle: "Workflows that",
         heroHighlight: "Run Themselves.",
@@ -256,8 +258,8 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         ],
         relatedServices: [
             { label: "AI Development", href: "/services/ai-development" },
-            { label: "Custom AI Agents", href: "/services/custom-ai-agents" },
-            { label: "Enterprise Platforms", href: "/services/enterprise-platforms" },
+            { label: "Custom AI Agents", href: "/services/ai-development/custom-ai-agents" },
+            { label: "Enterprise Platforms", href: "/services/software-development/enterprise-platforms" },
         ],
     },
 
@@ -342,17 +344,18 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             },
         ],
         relatedServices: [
-            { label: "MVP to Market", href: "/services/mvp-to-market" },
-            { label: "Enterprise Platforms", href: "/services/enterprise-platforms" },
-            { label: "SaaS Products", href: "/services/saas-products" },
+            { label: "MVP to Market", href: "/services/software-development/mvp-to-market" },
+            { label: "Enterprise Platforms", href: "/services/software-development/enterprise-platforms" },
+            { label: "SaaS Products", href: "/services/software-development/saas-products" },
         ],
     },
 
     /* ──────────────────────────────────────────────────────
      * MVP to Market
      * ────────────────────────────────────────────────────── */
-    "mvp-to-market": {
+    "software-development/mvp-to-market": {
         slug: "mvp-to-market",
+        parentSlug: "software-development",
         metaTitle: "MVP Development - Go From Idea to Market Fast",
         metaDescription:
             "Launch your MVP in weeks, not months. We build lean, functional minimum viable products with modern tech stacks, designed to validate your idea and attract early users.",
@@ -364,7 +367,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             "rapid prototyping",
             "lean startup",
         ],
-        canonical: "/services/mvp-to-market",
+        canonical: "/services/software-development/mvp-to-market",
         heroLabel: "MVP to Market",
         heroTitle: "From Idea to",
         heroHighlight: "First Users - Fast.",
@@ -427,16 +430,17 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         ],
         relatedServices: [
             { label: "Software Development", href: "/services/software-development" },
-            { label: "SaaS Products", href: "/services/saas-products" },
-            { label: "Enterprise Platforms", href: "/services/enterprise-platforms" },
+            { label: "SaaS Products", href: "/services/software-development/saas-products" },
+            { label: "Enterprise Platforms", href: "/services/software-development/enterprise-platforms" },
         ],
     },
 
     /* ──────────────────────────────────────────────────────
      * Enterprise Platforms
      * ────────────────────────────────────────────────────── */
-    "enterprise-platforms": {
+    "software-development/enterprise-platforms": {
         slug: "enterprise-platforms",
+        parentSlug: "software-development",
         metaTitle: "Enterprise Platform Development - Scalable & Secure",
         metaDescription:
             "We build enterprise-grade platforms that handle millions of transactions, meet compliance standards, and scale with your business. .NET, Laravel, and modern cloud architecture.",
@@ -448,7 +452,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             ".NET enterprise",
             "cloud platforms",
         ],
-        canonical: "/services/enterprise-platforms",
+        canonical: "/services/software-development/enterprise-platforms",
         heroLabel: "Enterprise Platforms",
         heroTitle: "Platforms Built for",
         heroHighlight: "Enterprise Scale.",
@@ -509,7 +513,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         ],
         relatedServices: [
             { label: "Software Development", href: "/services/software-development" },
-            { label: "SaaS Products", href: "/services/saas-products" },
+            { label: "SaaS Products", href: "/services/software-development/saas-products" },
             { label: "AI Development", href: "/services/ai-development" },
         ],
     },
@@ -517,8 +521,9 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     /* ──────────────────────────────────────────────────────
      * SaaS Products
      * ────────────────────────────────────────────────────── */
-    "saas-products": {
+    "software-development/saas-products": {
         slug: "saas-products",
+        parentSlug: "software-development",
         metaTitle: "SaaS Product Development - Build & Launch Your SaaS",
         metaDescription:
             "We build SaaS products from scratch - multi-tenant architecture, subscription billing, user management, and everything you need to launch and scale a software-as-a-service business.",
@@ -530,7 +535,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             "SaaS platform",
             "cloud SaaS",
         ],
-        canonical: "/services/saas-products",
+        canonical: "/services/software-development/saas-products",
         heroLabel: "SaaS Products",
         heroTitle: "Launch Your",
         heroHighlight: "SaaS Product.",
@@ -594,8 +599,8 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         ],
         relatedServices: [
             { label: "Software Development", href: "/services/software-development" },
-            { label: "MVP to Market", href: "/services/mvp-to-market" },
-            { label: "Enterprise Platforms", href: "/services/enterprise-platforms" },
+            { label: "MVP to Market", href: "/services/software-development/mvp-to-market" },
+            { label: "Enterprise Platforms", href: "/services/software-development/enterprise-platforms" },
         ],
     },
 
@@ -677,7 +682,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             },
         ],
         relatedServices: [
-            { label: "Documentation Systems", href: "/services/documentation-systems" },
+            { label: "Documentation Systems", href: "/services/technical-documentation/documentation-systems" },
             { label: "AI Development", href: "/services/ai-development" },
             { label: "Software Development", href: "/services/software-development" },
         ],
@@ -686,8 +691,9 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     /* ──────────────────────────────────────────────────────
      * Documentation Systems
      * ────────────────────────────────────────────────────── */
-    "documentation-systems": {
+    "technical-documentation/documentation-systems": {
         slug: "documentation-systems",
+        parentSlug: "technical-documentation",
         metaTitle: "Documentation Systems - Scalable Knowledge Infrastructure",
         metaDescription:
             "We build and deploy scalable documentation systems - developer portals, API references, internal wikis, and AI-indexed knowledge bases. Docs that evolve with your product.",
@@ -699,7 +705,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             "knowledge management",
             "docs-as-code",
         ],
-        canonical: "/services/documentation-systems",
+        canonical: "/services/technical-documentation/documentation-systems",
         heroLabel: "Documentation Systems",
         heroTitle: "Knowledge Infrastructure that",
         heroHighlight: "Scales With You.",
@@ -761,7 +767,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         relatedServices: [
             { label: "Technical Documentation", href: "/services/technical-documentation" },
             { label: "AI Development", href: "/services/ai-development" },
-            { label: "Custom AI Agents", href: "/services/custom-ai-agents" },
+            { label: "Custom AI Agents", href: "/services/ai-development/custom-ai-agents" },
         ],
     },
 };

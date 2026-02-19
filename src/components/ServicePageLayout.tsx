@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/accordion";
 import { fadeInUp, fadeInUpLg, viewportOnce, stagger } from "@/lib/animations";
 import type { ServicePageData } from "@/types";
+import { SERVICE_PAGES } from "@/config/services";
 
 interface ServicePageLayoutProps {
     data: ServicePageData;
@@ -43,6 +44,22 @@ export function ServicePageLayout({ data }: ServicePageLayoutProps) {
                             Services
                         </Link>
                     </li>
+                    {data.parentSlug && (() => {
+                        const parent = SERVICE_PAGES[data.parentSlug!];
+                        return parent ? (
+                            <>
+                                <ChevronRight className="size-3.5" />
+                                <li>
+                                    <Link
+                                        to={`/services/${data.parentSlug}`}
+                                        className="transition-colors hover:text-foreground"
+                                    >
+                                        {parent.heroLabel}
+                                    </Link>
+                                </li>
+                            </>
+                        ) : null;
+                    })()}
                     <ChevronRight className="size-3.5" />
                     <li aria-current="page" className="font-medium text-foreground">
                         {data.heroLabel}
